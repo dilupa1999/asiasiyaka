@@ -1045,6 +1045,7 @@ body {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 6px;
+  color: #ffffff !important;
 }
 
 .ar-hl-theme {
@@ -1431,7 +1432,25 @@ body {
   50% {
     transform: translateY(-10px) rotate(4deg);
   }
+/* WhatsApp Interactive Popup Box */
+.whatsapp-chat-popup {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 360px;
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+  display: none;
+  flex-direction: column;
+  z-index: 2147483645;
+  animation: waPopupIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 80, 19, 0.15);
 }
+
+.whatsapp-chat-popup.show {
   display: flex;
 }
 
