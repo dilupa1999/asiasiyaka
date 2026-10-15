@@ -1432,6 +1432,8 @@ body {
   50% {
     transform: translateY(-10px) rotate(4deg);
   }
+}
+
 /* WhatsApp Interactive Popup Box */
 .whatsapp-chat-popup {
   position: absolute;
