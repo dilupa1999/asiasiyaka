@@ -1,0 +1,483 @@
+/* =========================================================
+   Asia Siyaka Commodities PLC - Home Page (index.html)
+   Custom styles on top of the Agriva template (main.css)
+
+   Order follows the page:
+   Global > Header > Hero > About > Core Values > Global Exports
+   > Reports > Brands > Letter Image
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL - Section Spacing
+   Same gap for every section: 50px desktop, 45px laptop, 40px mobile
+   ========================================================= */
+.section-padding {
+    padding: 50px 0;
+}
+
+@media (max-width: 1199px) {
+    .section-padding {
+        padding: 45px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL - Preloader logo
+   ========================================================= */
+.farmer-loader {
+    width: 180px;
+}
+
+
+/* =========================================================
+   GLOBAL - Heading font (Helvetica), paragraphs keep the theme font
+   ========================================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", sans-serif !important;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION BAR
+   ========================================================= */
+
+/* Desktop (1200px+): compact bar, logo on the left, menu on the right */
+@media (min-width: 1200px) {
+
+    .header-1.header-2 .header-main.header-inner {
+        padding: 0 30px 0 0;
+        border-radius: 28px;
+        /* No overflow:hidden here — it would clip the dropdown submenus.
+           The pill shape is achieved by clipping only the overlay-shape below. */
+        overflow: visible;
+    }
+
+    /* Clip ONLY the decorative background overlay to the pill shape —
+       not the whole header, so the submenu can overflow freely. */
+    .header-1.header-2 .header-main .overlay-shape {
+        border-radius: 28px;
+        overflow: hidden;
+    }
+
+    /* Allow every nav wrapper to overflow so the submenu is never clipped */
+    .header-1.header-2 .header-right,
+    .header-1.header-2 .mean__menu-wrapper,
+    .header-1.header-2 .main-menu,
+    .header-1.header-2 .main-menu nav,
+    .header-1.header-2 .main-menu nav ul {
+        overflow: visible;
+    }
+
+    .header-1.header-2 .header-main .overlay-shape img {
+        width: calc(100% + 40px);
+        height: calc(100% + 20px);
+        max-width: none;
+        margin: -10px 0 0 -20px;
+        border-radius: 0;
+    }
+    .header-1.header-2 .header-main .header-left {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        padding: 10px 32px 10px 52px;
+    }
+    .header-1.header-2 .header-main .header-left .logo img {
+        width: 110px;
+        height: auto;
+    }
+    .header-1.header-2:not(.sticky) .header-main.header-inner {
+        background: linear-gradient(90deg, #0d4a1c 0, #0d4a1c 200px, rgba(13, 74, 28, 0) 520px);
+    }
+    .header-1.header-2 .header-main .header-right .header-btn {
+        display: none;
+    }
+    .header-1.header-2 .header-main .main-menu ul li {
+        margin-inline-end: 0;
+    }
+    .header-1.header-2 .header-main .main-menu ul li a {
+        padding: 0 16px;
+    }
+}
+
+/* Mobile / Tablet (up to 1199px): logo aligned left, hamburger on the right */
+@media (max-width: 1199px) {
+    .header-1.header-2 .header-main {
+        position: relative;
+        min-height: 84px;
+    }
+    .header-1.header-2 .header-main .header-left {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header-1.header-2 .header-main .header-left .logo img {
+        width: 90px;
+        height: auto;
+    }
+    .header-1.header-2 .header-main .header-right {
+        margin-left: auto;
+    }
+}
+
+/* Mobile / Tablet: dark shade behind the logo so it is clearly visible
+   over the hero video/image (not applied when the header turns white on scroll) */
+@media (max-width: 1199px) {
+    .header-1.header-2:not(.sticky) {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 65%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+
+/* =========================================================
+   HERO SLIDER (hero-section hero-3)
+   ========================================================= */
+
+/* Slides swap one at a time (no overlap) and the text animates in */
+#heroSlider .carousel-item,
+#heroSliderMobile .carousel-item {
+    transition: none;
+}
+#heroSlider .carousel-item.active > *,
+#heroSlider .carousel-item-next > *,
+#heroSlider .carousel-item-prev > *,
+#heroSliderMobile .carousel-item.active > *,
+#heroSliderMobile .carousel-item-next > *,
+#heroSliderMobile .carousel-item-prev > * {
+    animation: hero-rise 0.8s ease both;
+}
+#heroSlider .carousel-item > p,
+#heroSliderMobile .carousel-item > p { animation-delay: 0.25s; }
+#heroSlider .carousel-item > div,
+#heroSliderMobile .carousel-item > div { animation-delay: 0.45s; }
+@keyframes hero-rise {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile (up to 575px): shorter hero (not full screen), video plays behind
+   the slider text and the text stays clearly visible */
+@media (max-width: 575px) {
+    .hero-3 {
+        height: 600px;
+        padding: 0;
+    }
+    .hero-3 .drone-video {
+        display: block;
+        z-index: 0;
+    }
+    .hero-3 .drone-video video {
+        height: 100%;
+    }
+    .hero-3 .hero-image {
+        z-index: 1;
+        background-image: none !important;
+    }
+    .hero-3 .hero-image::before {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 100%);
+    }
+    .hero-3 .hero-image .leafs {
+        margin-top: 140px;
+    }
+    #heroSliderMobile .carousel-item h1,
+    #heroSliderMobile .carousel-item p,
+    #heroSlider .carousel-item h1,
+    #heroSlider .carousel-item p {
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   ABOUT SECTION (about-section-3)
+   ========================================================= */
+
+/* Narrower content so the decor images (cinnamon / tea sprig) fit on both sides */
+@media (min-width: 1200px) {
+    .about-section-3 .container {
+        max-width: 1140px;
+    }
+}
+
+/* Smaller image cards (25+ years / auction) so they sit side by side without overlapping */
+@media (min-width: 992px) and (max-width: 1600px) {
+    .about-section-3 .about-wrapper-3 .about-content .about-image-item .about-image {
+        width: 255px;
+        height: 143px;
+    }
+    .about-section-3 .about-wrapper-3 .about-content .about-image-item .about-image .count-content {
+        top: 22px;
+        left: 38px;
+    }
+    .about-section-3 .about-wrapper-3 .about-content .about-image-item .about-image .count-content h2 {
+        font-size: 60px;
+    }
+    .about-section-3 .about-wrapper-3 .about-content .about-image-item .about-image .count-content p {
+        font-size: 12px;
+    }
+}
+
+/* Decor images (cinnamon / tea sprig) on smaller desktop screens */
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .about-section-3 .chili-shape,
+    .about-section-3 .tree-shape {
+        display: block;
+    }
+    .about-section-3 .chili-shape {
+        left: 15px;
+        width: 100px;
+    }
+    .about-section-3 .tree-shape {
+        right: 15px;
+        width: 90px;
+    }
+    .about-section-3 .chili-shape img,
+    .about-section-3 .tree-shape img {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   CORE VALUES SECTION - Rotating Values Wheel
+   ========================================================= */
+.cv-wheel {
+    --size: min(400px, 86vw);
+    --r: calc(var(--size) * 0.36);
+    --dot: calc(var(--size) * 0.27);
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto;
+}
+
+.cv-ring {
+    position: absolute;
+    inset: 21%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 52%, #eceeec 53%);
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, .06), 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.cv-center {
+    position: absolute;
+    inset: 36%;
+    z-index: 3;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.25;
+    font-weight: 700;
+    font-size: calc(var(--size) * 0.046);
+    color: #2f2f2f;
+}
+
+.cv-center span {
+    color: #1e5b1e;
+}
+
+.cv-orbit {
+    position: absolute;
+    inset: 0;
+    animation: cv-spin 40s linear infinite;
+}
+
+.cv-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--dot);
+    height: var(--dot);
+    margin: calc(var(--dot) / -2);
+    border-radius: 50%;
+    background: var(--c);
+    border: 6px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotate(calc(var(--i) * 45deg)) translateY(calc(var(--r) * -1)) rotate(calc(var(--i) * -45deg));
+}
+
+.cv-item span {
+    display: block;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    font-size: calc(var(--size) * 0.036);
+    animation: cv-spin 40s linear infinite reverse;
+}
+
+.cv-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    color: var(--c);
+    font-size: calc(var(--size) * 0.07);
+    transform: translate(-50%, -50%) rotate(calc(var(--i) * 45deg)) translateY(calc(var(--size) * -0.2));
+}
+
+/* Pause the wheel on hover */
+.cv-wheel:hover .cv-orbit,
+.cv-wheel:hover .cv-item span {
+    animation-play-state: paused;
+}
+
+@keyframes cv-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* No rotation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .cv-orbit,
+    .cv-item span {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   GLOBAL EXPORTS SECTION (service-section-3)
+   ========================================================= */
+
+/* Justified paragraphs */
+.service-section-3 p {
+    text-align: justify !important;
+}
+
+/* Tea branch decor (bottom right): fixed size so it never grows too big,
+   also shown (still floating) on tablet / mobile above the marquee text */
+.service-section-3 .drone {
+    display: block;
+    width: 220px;
+    bottom: 200px;
+    right: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+.service-section-3 .drone img {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .service-section-3 .drone {
+        width: 150px;
+        bottom: 170px;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-section-3 .drone {
+        width: 120px;
+        bottom: 165px;
+    }
+}
+
+
+/* =========================================================
+   REPORTS SECTION
+   ========================================================= */
+
+/* Justified paragraphs (section title and report cards) */
+.section-title-area p,
+.report-card p {
+    text-align: justify !important;
+}
+
+
+/* =========================================================
+   BRAND SECTION (brand-section-3)
+   ========================================================= */
+
+/* Heading: same look as the Awards heading */
+.brand-section-3 .section-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: none;
+    font-family: inherit;
+    margin-bottom: 0;
+    padding: 0;
+}
+.brand-section-3 .section-title h2::before,
+.brand-section-3 .section-title h2::after {
+    display: none;
+}
+@media (max-width: 1399px) {
+    .brand-section-3 .section-title h2 {
+        font-size: 30px;
+    }
+}
+
+/* Commodity images slider: grey image by default */
+.brand-section-3 .brand-img-1 img {
+    max-width: 100%;
+    max-height: 90px;
+}
+
+.brand-section-3 .brand-img-1:first-child img {
+    filter: grayscale(1);
+}
+
+
+/* =========================================================
+   LETTER IMAGE SECTION - "SIYAKA" Text Image
+   Keeps the same gap above/below as other sections and
+   keeps the tea cup sitting inside the footer curve
+   ========================================================= */
+.letter-image-section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.letter-image-section .letter-image {
+    margin-bottom: 0;
+}
+
+.letter-image-section .drone-shape {
+    margin-top: -200px;
+}
+
+@media (max-width: 1399px) {
+    .letter-image-section {
+        margin-top: 19px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .letter-image-section {
+        margin-top: 14px;
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 991px) {
+    .letter-image-section {
+        margin-top: 18px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .letter-image-section {
+        margin-top: 30px;
+        margin-bottom: 27px;
+    }
+}

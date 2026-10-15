@@ -1,0 +1,252 @@
+/* ========== Tea Regions Component ========== */
+
+.region-tabs .tab-btn {
+    background-color: #FBFAF4;
+    border: 1px solid #D9D3C0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #26352D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.region-tabs .tab-btn small {
+    font-size: 0.7rem;
+    color: #7a7567;
+    letter-spacing: 0.03em;
+}
+
+.region-tabs .tab-btn span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.region-tabs .tab-btn.active {
+    background-color: #123F30;
+    color: white;
+    border-color: #123F30;
+}
+
+.region-tabs .tab-btn.active small {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.info-panel {
+    background-color: #FFFDF7;
+    border-color: #D9D3C0;
+}
+
+.panel-header {
+    background-color: #123F30;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.panel-header h3,
+.panel-header p {
+    color: white !important;
+}
+
+.panel-header small {
+    color: #adb5a7;
+}
+
+.metadata-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #6E6A58;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.content-item h4 {
+    font-size: 1.1rem;
+    color: #123F30;
+}
+
+.content-item p {
+    color: #6E6A58;
+}
+
+
+
+
+.live-weather-card {
+  background: #f0f7f4;
+  border: 1px solid #cce3de;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+}
+
+.weather-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #2d5a43;
+}
+
+.weather-icon {
+  font-size: 1.25rem;
+}
+
+.weather-sep {
+  color: #a3c4bc;
+}
+
+
+
+
+/* ========== Tea Regions - Reference Design Styling ========== */
+
+/* Outer Panel Card */
+.info-panel {
+  background-color: #fcfbf7 !important;
+  border: 1px solid #dfdbce !important;
+  border-radius: 8px !important;
+  padding: 14px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Tabs Styling */
+.region-tabs {
+  gap: 8px !important;
+}
+
+.region-tabs .tab-btn {
+  background-color: #fdfcf7;
+  border: 1px solid #d5cfbe;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #11382b;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.region-tabs .tab-btn:hover {
+  background-color: #f3efe6;
+}
+
+.region-tabs .tab-btn.active {
+  background-color: #11382b;
+  color: #ffffff;
+  border-color: #11382b;
+}
+
+/* Dark Green Header Strip */
+.panel-header-strip {
+  background-color: #11382b;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.panel-header-strip .header-content {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.panel-header-strip .district-tag {
+  color: #a8b898;
+  margin-right: 8px;
+}
+
+.panel-header-strip .region-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-right: 8px;
+}
+
+.panel-header-strip .region-desc {
+  color: #e2e8e0;
+}
+
+/* Compact Weather Badge in Header */
+.header-weather-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.78rem;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Metadata / Specs Row */
+.panel-specs-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 10px 4px 12px 4px;
+  font-size: 0.86rem;
+  color: #2b2b2b;
+}
+
+.panel-specs-strip strong {
+  color: #11382b;
+  font-weight: 700;
+}
+
+/* 4 Columns Grid */
+.panel-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 4px;
+}
+
+.panel-details-grid .detail-col h4 {
+  color: #8c7643;
+  font-size: 0.83rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}
+
+.panel-details-grid .detail-col p {
+  color: #4a4a45;
+  font-size: 0.79rem;
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .panel-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .panel-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .panel-specs-strip {
+    gap: 12px;
+  }
+}
