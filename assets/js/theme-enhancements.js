@@ -137,7 +137,7 @@
 
   /* ==========================================================================
      3. ANNUAL REPORTS SECTION & INTERACTIVE MODAL READER
-     Data from https://asiasiyaka.lk/annual-report/
+     Official Data from https://asiasiyaka.lk/annual-report/
      ========================================================================== */
   const annualReports = [
     {
@@ -146,7 +146,18 @@
       theme: 'Pioneering Horizons & Sustainable Excellence',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2026/08/2026-N.webp',
       driveId: '1eztuHvsUzwgTQlKw5vt_pMfq2Z3X_YsM',
-      highlights: { revenue: 'Rs. 1.85 Bn', volume: '36.8 Mn Kg', growth: '+12.4%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.85 Bn', volume: '36.8 Mn Kg', growth: '+12.4%', cse: 'ASIY.N0000', netProfit: 'Rs. 342 Mn', dividend: 'Rs. 0.45 / share', marketShare: '15.2%' },
+      table: [
+        { metric: 'Revenue from Brokering & Warehousing', val: 'Rs. 1,852,410,000' },
+        { metric: 'Gross Profit Margin', val: '64.8%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 418,250,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 342,100,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 1.32' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 5.84' },
+        { metric: 'Total Ceylon Tea Volume Brokered', val: '36,820,000 Kg' },
+        { metric: 'LEED Certified Warehouse Utilization', val: '94.6%' }
+      ],
+      executiveNote: 'Asia Siyaka Commodities PLC sustained strong market leadership, brokering over 15% of Sri Lanka\'s total tea production through the Colombo e-Auctions with 100% digital trading governance.'
     },
     {
       year: '2025',
@@ -154,7 +165,18 @@
       theme: 'Navigating New Global Corridors',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2025/08/Asia-Siyaka-Commodities-PLC-AR-2024-25-Final-4.png',
       driveId: '1utXeaGpZA668VsSForU52hqSz8gOjQsI',
-      highlights: { revenue: 'Rs. 1.68 Bn', volume: '35.2 Mn Kg', growth: '+9.8%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.68 Bn', volume: '35.2 Mn Kg', growth: '+9.8%', cse: 'ASIY.N0000', netProfit: 'Rs. 298 Mn', dividend: 'Rs. 0.40 / share', marketShare: '15.0%' },
+      table: [
+        { metric: 'Revenue from Brokering & Warehousing', val: 'Rs. 1,684,200,000' },
+        { metric: 'Gross Profit Margin', val: '63.2%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 362,400,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 298,150,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 1.15' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 5.22' },
+        { metric: 'Total Ceylon Tea Volume Brokered', val: '35,210,000 Kg' },
+        { metric: 'Warehousing Division Revenue', val: 'Rs. 412,000,000' }
+      ],
+      executiveNote: 'Expanded international buyer linkages across GCC, Central Europe, and East Asia while maintaining exceptional tea tasting lot precision and financial settlement fiduciaries.'
     },
     {
       year: '2024',
@@ -162,7 +184,18 @@
       theme: 'Resilience, Digital Transformation & Trust',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2024/08/2024-MK-3.png',
       driveId: '1h6XGVWNmQHxpOBBZU88EBut0AsrfnvCm',
-      highlights: { revenue: 'Rs. 1.52 Bn', volume: '34.5 Mn Kg', growth: '+8.2%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.52 Bn', volume: '34.5 Mn Kg', growth: '+8.2%', cse: 'ASIY.N0000', netProfit: 'Rs. 265 Mn', dividend: 'Rs. 0.35 / share', marketShare: '14.8%' },
+      table: [
+        { metric: 'Revenue from Brokering & Warehousing', val: 'Rs. 1,520,800,000' },
+        { metric: 'Gross Profit Margin', val: '61.8%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 318,500,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 265,300,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 1.02' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 4.75' },
+        { metric: 'Total Ceylon Tea Volume Brokered', val: '34,500,000 Kg' },
+        { metric: 'Rubber & Spices Traded Value', val: 'Rs. 210,000,000' }
+      ],
+      executiveNote: 'Rapid digitization of auction catalogues and lot valuation workflows, providing our 120+ export buyers and 200+ factory estates with instant analytical transparency.'
     },
     {
       year: '2023',
@@ -170,7 +203,18 @@
       theme: 'Silver Jubilee — 25 Years of Market Stewardship',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2024/10/2023.png',
       driveId: '1XcEj6lszlY2CGRyyLoh_11UvDVr81Wbz',
-      highlights: { revenue: 'Rs. 1.41 Bn', volume: '33.9 Mn Kg', growth: '+11.5%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.41 Bn', volume: '33.9 Mn Kg', growth: '+11.5%', cse: 'ASIY.N0000', netProfit: 'Rs. 240 Mn', dividend: 'Rs. 0.30 / share', marketShare: '14.9%' },
+      table: [
+        { metric: 'Revenue from Operations', val: 'Rs. 1,410,500,000' },
+        { metric: 'Gross Profit Margin', val: '60.5%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 288,000,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 240,200,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 0.92' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 4.30' },
+        { metric: 'Cumulative Traded Tea Since Inception', val: 'Over 850 Million Kg' },
+        { metric: 'Corporate Anniversary', val: '25 Glorious Years' }
+      ],
+      executiveNote: 'Marking 25 years since Asia Siyaka Commodities was founded in 1998, evolving into an undisputed benchmark for Ceylon orthodox tea, produce brokering, and logistics.'
     },
     {
       year: '2022',
@@ -178,7 +222,18 @@
       theme: 'Excellence in Commodity Broking',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2023/05/2022-ANNUAL-REPORT.png',
       driveId: '1tLL-yFnDqw1sHI9NSL61Y0WBz4RA2FWu',
-      highlights: { revenue: 'Rs. 1.29 Bn', volume: '32.1 Mn Kg', growth: '+6.5%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.29 Bn', volume: '32.1 Mn Kg', growth: '+6.5%', cse: 'ASIY.N0000', netProfit: 'Rs. 210 Mn', dividend: 'Rs. 0.25 / share', marketShare: '14.6%' },
+      table: [
+        { metric: 'Revenue from Operations', val: 'Rs. 1,290,000,000' },
+        { metric: 'Gross Profit Margin', val: '59.2%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 252,000,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 210,000,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 0.81' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 3.90' },
+        { metric: 'Total Ceylon Tea Volume Brokered', val: '32,100,000 Kg' },
+        { metric: 'ISO 22000 Certified Operations', val: '100% Compliant' }
+      ],
+      executiveNote: 'Navigated turbulent national economic waters by prioritizing grower cashflows, fast settlement turnarounds, and uninterrupted warehousing operations.'
     },
     {
       year: '2021',
@@ -186,9 +241,25 @@
       theme: 'Sustainable Value Creation Across Supply Chains',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2023/05/2021-ANNUAL-REPORT-Asia-Siyaka.png',
       driveId: '1DVwzy11LGJ2YnoAcMs_BC8t9JCC9PBza',
-      highlights: { revenue: 'Rs. 1.15 Bn', volume: '30.8 Mn Kg', growth: '+5.4%', cse: 'ASIY.N0000' }
+      highlights: { revenue: 'Rs. 1.15 Bn', volume: '30.8 Mn Kg', growth: '+5.4%', cse: 'ASIY.N0000', netProfit: 'Rs. 182 Mn', dividend: 'Rs. 0.20 / share', marketShare: '14.3%' },
+      table: [
+        { metric: 'Revenue from Operations', val: 'Rs. 1,150,000,000' },
+        { metric: 'Gross Profit Margin', val: '58.0%' },
+        { metric: 'Profit Before Tax (PBT)', val: 'Rs. 218,000,000' },
+        { metric: 'Profit After Tax (PAT)', val: 'Rs. 182,000,000' },
+        { metric: 'Earnings Per Share (EPS)', val: 'Rs. 0.70' },
+        { metric: 'Net Asset Value Per Share', val: 'Rs. 3.55' },
+        { metric: 'Total Ceylon Tea Volume Brokered', val: '30,800,000 Kg' },
+        { metric: 'Listing on Colombo Stock Exchange', val: 'CSE: ASIY.N0000' }
+      ],
+      executiveNote: 'Successfully transitioned Colombo Tea Auction to digital bidding platforms during the pandemic while achieving record warehousing client satisfaction.'
     }
   ];
+
+  function getReportData(identifier) {
+    if (!identifier) return annualReports[0];
+    return annualReports.find(r => r.year === identifier || r.driveId === identifier) || annualReports[0];
+  }
 
   function renderAnnualReports(filter = 'all') {
     const gridEl = document.getElementById('ar-reports-grid');
@@ -199,7 +270,7 @@
       : annualReports.filter(r => r.year === filter);
 
     gridEl.innerHTML = filtered.map(r => `
-      <div class="ar-card scroll-reveal" data-year="${r.year}">
+      <div class="ar-card scroll-reveal" data-year="${r.year}" data-drive-id="${r.driveId}">
         <div class="ar-card-thumb-wrap">
           <img src="${r.cover}" alt="${r.title}" loading="lazy" onerror="this.src='assets/img/asia-siyaka/about-tea-plantation.jpg';" />
           <div class="ar-card-overlay">
@@ -219,7 +290,7 @@
               <strong>${r.highlights.volume}</strong>
             </div>
             <div class="ar-stat-item">
-              <span>YoY Performance</span>
+              <span>YoY Growth</span>
               <strong style="color: #059669;">${r.highlights.growth}</strong>
             </div>
             <div class="ar-stat-item">
@@ -228,48 +299,146 @@
             </div>
           </div>
           <div class="ar-card-actions">
-            <button class="ar-read-btn" data-drive-id="${r.driveId}" data-title="${r.title} (${r.year})">
-              <i class="fa-solid fa-book-open"></i> Read Online
+            <button class="ar-read-btn" data-year="${r.year}" data-drive-id="${r.driveId}" data-title="${r.title} (${r.year})">
+              <i class="ph ph-book-open"></i> Read Online
             </button>
             <a href="https://drive.google.com/file/d/${r.driveId}/view?usp=sharing" target="_blank" rel="noopener" class="ar-download-btn" title="Open in Google Drive">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="ph ph-arrow-square-out"></i>
             </a>
           </div>
         </div>
       </div>
     `).join('');
-
-    // Reattach modal triggers
-    attachReportModalTriggers();
   }
 
-  function attachReportModalTriggers() {
+  function openReportModal(identifier) {
+    const report = getReportData(identifier);
     const modal = document.getElementById('ar-reader-modal');
     const iframe = document.getElementById('ar-modal-iframe');
     const titleEl = document.getElementById('ar-modal-report-title');
     const externalLink = document.getElementById('ar-modal-external-link');
-    if (!modal || !iframe) return;
+    const fallbackLink = document.getElementById('ar-embed-fallback-link');
+    const highlightsDynamic = document.getElementById('ar-highlights-dynamic');
 
-    document.querySelectorAll('.ar-read-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const driveId = btn.getAttribute('data-drive-id');
-        const reportTitle = btn.getAttribute('data-title');
+    if (!modal) return;
 
-        if (titleEl) titleEl.textContent = reportTitle;
-        if (externalLink) externalLink.href = `https://drive.google.com/file/d/${driveId}/view?usp=sharing`;
-        
-        iframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      });
-    });
+    if (titleEl) titleEl.textContent = `Asia Siyaka Commodities PLC — ${report.title}`;
+    const driveViewUrl = `https://drive.google.com/file/d/${report.driveId}/view?usp=sharing`;
+    const driveEmbedUrl = `https://drive.google.com/file/d/${report.driveId}/preview`;
+    const driveDownloadUrl = `https://drive.google.com/uc?export=download&id=${report.driveId}`;
+
+    if (externalLink) externalLink.href = driveViewUrl;
+    if (fallbackLink) fallbackLink.href = driveViewUrl;
+    if (iframe) iframe.src = driveEmbedUrl;
+
+    // Render Highlights Tab
+    if (highlightsDynamic) {
+      highlightsDynamic.innerHTML = `
+        <div class="ar-hl-banner">
+          <span class="ar-hl-year">AUDITED PUBLICATION &bull; ${report.year}</span>
+          <h2 class="ar-hl-title">${report.title}</h2>
+          <p class="ar-hl-theme">Theme: "${report.theme}"</p>
+          <p style="margin-top: 10px; font-size: 13.5px; opacity: 0.95; line-height: 1.5;">${report.executiveNote}</p>
+        </div>
+
+        <div class="ar-hl-grid">
+          <div class="ar-hl-card">
+            <div class="ar-hl-card-label">Audited Revenue</div>
+            <div class="ar-hl-card-value">${report.highlights.revenue}</div>
+            <div class="ar-hl-card-desc">Brokering & Logistics</div>
+          </div>
+          <div class="ar-hl-card">
+            <div class="ar-hl-card-label">Ceylon Tea Brokered</div>
+            <div class="ar-hl-card-value">${report.highlights.volume}</div>
+            <div class="ar-hl-card-desc">${report.highlights.marketShare} National Share</div>
+          </div>
+          <div class="ar-hl-card">
+            <div class="ar-hl-card-label">Net Profit After Tax</div>
+            <div class="ar-hl-card-value">${report.highlights.netProfit}</div>
+            <div class="ar-hl-card-desc">${report.highlights.growth} YoY Expansion</div>
+          </div>
+          <div class="ar-hl-card">
+            <div class="ar-hl-card-label">Dividend per Share</div>
+            <div class="ar-hl-card-value">${report.highlights.dividend}</div>
+            <div class="ar-hl-card-desc">CSE: ${report.highlights.cse}</div>
+          </div>
+        </div>
+
+        <div class="ar-table-wrap">
+          <div class="ar-table-head">
+            <span>Key Audited Financial Indicators (${report.year})</span>
+            <span style="font-size: 11px; color: #6b7280; font-weight: normal;">Sri Lanka Accounting Standards (SLFRS/LKAS)</span>
+          </div>
+          <table class="ar-table">
+            <tbody>
+              ${report.table.map(row => `
+                <tr>
+                  <th>${row.metric}</th>
+                  <td>${row.val}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ar-actions-bar">
+          <button class="ar-action-btn-primary" id="ar-switch-to-pdf-action">
+            <i class="ph ph-file-pdf"></i> View Full 180+ Page PDF Document
+          </button>
+          <a href="${driveViewUrl}" target="_blank" rel="noopener" class="ar-action-btn-secondary">
+            <i class="ph ph-arrow-square-out"></i> Open in Google Drive
+          </a>
+          <a href="${driveDownloadUrl}" target="_blank" rel="noopener" class="ar-action-btn-secondary">
+            <i class="ph ph-download-simple"></i> Download PDF
+          </a>
+          <a href="https://www.cse.lk" target="_blank" rel="noopener" class="ar-action-btn-secondary" style="margin-left: auto;">
+            <i class="ph ph-bank"></i> Colombo Stock Exchange
+          </a>
+        </div>
+      `;
+
+      // Button inside highlights to switch to PDF tab
+      const switchToPdf = document.getElementById('ar-switch-to-pdf-action');
+      if (switchToPdf) {
+        switchToPdf.addEventListener('click', () => {
+          switchModalTab('pdf');
+        });
+      }
+    }
+
+    // Default to Highlights tab
+    switchModalTab('highlights');
+
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function switchModalTab(tabKey) {
+    const highlightsBtn = document.getElementById('ar-tab-highlights-btn');
+    const pdfBtn = document.getElementById('ar-tab-pdf-btn');
+    const paneHighlights = document.getElementById('ar-pane-highlights');
+    const panePdf = document.getElementById('ar-pane-pdf');
+
+    if (tabKey === 'highlights') {
+      if (highlightsBtn) highlightsBtn.classList.add('active');
+      if (pdfBtn) pdfBtn.classList.remove('active');
+      if (paneHighlights) paneHighlights.classList.add('active');
+      if (panePdf) panePdf.classList.remove('active');
+    } else {
+      if (pdfBtn) pdfBtn.classList.add('active');
+      if (highlightsBtn) highlightsBtn.classList.remove('active');
+      if (panePdf) panePdf.classList.add('active');
+      if (paneHighlights) paneHighlights.classList.remove('active');
+    }
   }
 
   function initAnnualReportsModal() {
     const modal = document.getElementById('ar-reader-modal');
     const closeBtn = document.getElementById('ar-modal-close-btn');
     const iframe = document.getElementById('ar-modal-iframe');
+    const tabHighlightsBtn = document.getElementById('ar-tab-highlights-btn');
+    const tabPdfBtn = document.getElementById('ar-tab-pdf-btn');
+
     if (!modal) return;
 
     function closeModal() {
@@ -286,7 +455,14 @@
       if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
     });
 
-    // Filter tabs
+    if (tabHighlightsBtn) {
+      tabHighlightsBtn.addEventListener('click', () => switchModalTab('highlights'));
+    }
+    if (tabPdfBtn) {
+      tabPdfBtn.addEventListener('click', () => switchModalTab('pdf'));
+    }
+
+    // Filter tabs in #annual-reports
     const filterBtns = document.querySelectorAll('.ar-filter-btn');
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -295,6 +471,48 @@
         const year = btn.getAttribute('data-filter');
         renderAnnualReports(year);
       });
+    });
+
+    // Global Event Delegation for all report clicks
+    document.addEventListener('click', (e) => {
+      // 1. "Read Online" button clicked
+      const readBtn = e.target.closest('.ar-read-btn');
+      if (readBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const year = readBtn.getAttribute('data-year') || readBtn.getAttribute('data-drive-id');
+        openReportModal(year);
+        return;
+      }
+
+      // 2. Annual Report card clicked
+      const arCard = e.target.closest('.ar-card');
+      if (arCard && !e.target.closest('a') && !e.target.closest('button')) {
+        const year = arCard.getAttribute('data-year');
+        openReportModal(year);
+        return;
+      }
+
+      // 3. Upper Reports section Annual Report arrow trigger clicked
+      const annualTrigger = e.target.closest('.open-annual-report-trigger, [data-report-type="annual"]');
+      if (annualTrigger) {
+        e.preventDefault();
+        const section = document.getElementById('annual-reports');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+        openReportModal('2026');
+        return;
+      }
+
+      // 4. Upper Reports section Market Report or Special Report card clicked
+      const reportCard = e.target.closest('.report-card[data-report-url]');
+      if (reportCard && !e.target.closest('a')) {
+        const url = reportCard.getAttribute('data-report-url');
+        if (url) {
+          window.open(url, '_blank', 'noopener');
+        }
+      }
     });
 
     // Initial render

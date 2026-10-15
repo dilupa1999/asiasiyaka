@@ -16,13 +16,22 @@
     canvas.style.width = '100vw';
     canvas.style.height = '100vh';
     canvas.style.pointerEvents = 'none';
-    canvas.style.zIndex = '2'; // Above background, below interactive cards
-    canvas.style.opacity = '0.75';
+    canvas.style.zIndex = '9999'; // Floats in front of page elements with zero click interference
+    canvas.style.opacity = '0.85';
     document.body.appendChild(canvas);
 
     const ctx = canvas.getContext('2d');
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
+
+    // Mouse breeze coordinates
+    let mouse = { x: -1000, y: -1000, vx: 0, vy: 0, lastX: 0, lastY: 0 };
+    window.addEventListener('mousemove', (e) => {
+      mouse.vx = e.clientX - mouse.lastX;
+      mouse.vy = e.clientY - mouse.lastY;
+      mouse.x = mouse.lastX = e.clientX;
+      mouse.y = mouse.lastY = e.clientY;
+    }, { passive: true });
 
     window.addEventListener('resize', () => {
       width = canvas.width = window.innerWidth;
@@ -61,6 +70,18 @@
 
       update() {
         this.swingAngle += this.swingSpeed;
+        
+        // Wind reaction to mouse cursor proximity
+        const dx = this.x - mouse.x;
+        const dy = this.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          const force = (120 - dist) / 120;
+          this.x += (dx / dist) * force * 4 + mouse.vx * 0.1;
+          this.y += (dy / dist) * force * 3 + mouse.vy * 0.1;
+          this.rotation += force * 0.08;
+        }
+
         this.x += this.speedX + Math.sin(this.swingAngle) * 0.5;
         this.y += this.speedY;
         this.rotation += this.rotationSpeed;

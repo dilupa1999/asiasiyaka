@@ -901,7 +901,8 @@
           <div class="row g-0">
             <div class="col-lg-4 tp_fade_anim" data-delay=".3" data-fade-from="left">
               <div class="feature-box-item-2 report-card h-100 rounded-0 d-flex flex-column p-4 border-end"
-                style="--theme2: #6b7f2a; min-height: 540px">
+                data-report-url="https://asiasiyaka.lk/market-report/"
+                style="--theme2: #6b7f2a; min-height: 540px; cursor: pointer;">
                 <div class="maize-shape">
                   <img src="assets/img/asia-siyaka/report-tea-leaf.png" alt="" />
                 </div>
@@ -932,7 +933,7 @@
                       class="img-fluid d-block mx-auto w-50" />
                   </div>
                 </div>
-                <a href="#"
+                <a href="https://asiasiyaka.lk/market-report/" target="_blank" rel="noopener"
                   class="d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
                   style="
                       width: 56px;
@@ -944,7 +945,8 @@
             </div>
             <div class="col-lg-4 tp_fade_anim" data-delay=".5" data-fade-from="left">
               <div class="feature-box-item-2 report-card h-100 rounded-0 d-flex flex-column p-4 border-end"
-                style="--theme2: #6b7f2a; min-height: 540px">
+                data-report-type="annual"
+                style="--theme2: #6b7f2a; min-height: 540px; cursor: pointer;">
                 <div class="maize-shape">
                   <img src="assets/img/asia-siyaka/report-tea-leaf.png" alt="" />
                 </div>
@@ -972,8 +974,7 @@
                       class="img-fluid d-block mx-auto w-50" />
                   </div>
                 </div>
-                <a href="#annual-reports"
-                  class="d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
+                <a href="#annual-reports" class="open-annual-report-trigger d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
                   style="
                       width: 56px;
                       height: 56px;
@@ -984,7 +985,8 @@
             </div>
             <div class="col-lg-4 tp_fade_anim" data-delay=".7" data-fade-from="left">
               <div class="feature-box-item-2 report-card h-100 rounded-0 d-flex flex-column p-4"
-                style="--theme2: #6b7f2a; min-height: 540px">
+                data-report-url="https://asiasiyaka.lk/reports/"
+                style="--theme2: #6b7f2a; min-height: 540px; cursor: pointer;">
                 <div class="maize-shape">
                   <img src="assets/img/asia-siyaka/report-tea-leaf.png" alt="" />
                 </div>
@@ -1016,7 +1018,7 @@
                       class="img-fluid d-block mx-auto w-50" />
                   </div>
                 </div>
-                <a href="#"
+                <a href="https://asiasiyaka.lk/reports/" target="_blank" rel="noopener"
                   class="d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
                   style="
                       width: 56px;
@@ -1437,8 +1439,14 @@
             ">
           SIYAKA
         </div>
-        <div class="drone-shape">
-          <img src="assets/img/asia-siyaka/decor-tea-cup.png" alt="img" />
+        <div class="drone-shape position-relative">
+          <div class="tea-steam-container">
+            <span class="tea-steam-wisp wisp-1"></span>
+            <span class="tea-steam-wisp wisp-2"></span>
+            <span class="tea-steam-wisp wisp-3"></span>
+            <span class="tea-steam-wisp wisp-4"></span>
+          </div>
+          <img src="assets/img/asia-siyaka/decor-tea-cup.png" alt="Ceylon Hot Tea Cup" />
         </div>
       </div>
 
@@ -1730,30 +1738,57 @@
       });
   </script>
 
-  <!-- Annual Report Modal Reader -->
+  <!-- Annual Report Modal Reader & Corporate Governance Viewer -->
   <div id="ar-reader-modal" class="ar-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="ar-modal-report-title">
     <div class="ar-modal-container">
       <div class="ar-modal-header">
-        <div class="ar-modal-title">
-          <i class="fa-solid fa-file-invoice" style="color: #f0c945;"></i>
-          <span id="ar-modal-report-title">Asia Siyaka Commodities PLC — Annual Report</span>
+        <div class="ar-modal-header-left">
+          <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Logo" class="ar-modal-logo" />
+          <div>
+            <div class="ar-modal-subtitle">Asia Siyaka Commodities PLC &bull; Colombo Stock Exchange (CSE: ASIY.N0000)</div>
+            <h4 class="ar-modal-title" id="ar-modal-report-title">Asia Siyaka Commodities PLC — Annual Report</h4>
+          </div>
         </div>
-        <div class="ar-modal-actions">
+        <div class="ar-modal-header-right">
+          <div class="ar-tab-switch">
+            <button class="ar-tab-btn active" id="ar-tab-highlights-btn" data-target="highlights">
+              <i class="ph ph-chart-line-up"></i>
+              <span>Key Highlights & Financials</span>
+            </button>
+            <button class="ar-tab-btn" id="ar-tab-pdf-btn" data-target="pdf">
+              <i class="ph ph-file-pdf"></i>
+              <span>Full Document (PDF)</span>
+            </button>
+          </div>
           <a id="ar-modal-external-link" href="#" target="_blank" rel="noopener" class="ar-modal-btn">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+            <i class="ph ph-arrow-square-out"></i>
+            <span>Open in Full Screen</span>
           </a>
-          <button id="ar-modal-close-btn" class="ar-modal-close" aria-label="Close report viewer">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+          <button id="ar-modal-close-btn" class="ar-modal-close" aria-label="Close report viewer">&times;</button>
         </div>
       </div>
       <div class="ar-modal-body">
-        <iframe id="ar-modal-iframe" src="" title="Annual Report Preview" allow="autoplay"></iframe>
+        <!-- Tab Pane 1: Audited Highlights & Executive Summary -->
+        <div id="ar-pane-highlights" class="ar-modal-pane active">
+          <div class="ar-highlights-content" id="ar-highlights-dynamic">
+            <!-- Dynamic Audited Highlights injected by theme-enhancements.js -->
+          </div>
+        </div>
+        <!-- Tab Pane 2: Embedded Document Preview -->
+        <div id="ar-pane-pdf" class="ar-modal-pane">
+          <div class="ar-embed-fallback-banner">
+            <span>Official Google Drive Document Viewer</span>
+            <a id="ar-embed-fallback-link" href="#" target="_blank" rel="noopener" class="ar-fallback-btn">
+              <i class="ph ph-arrow-square-out"></i> Click to Open Full PDF in New Tab
+            </a>
+          </div>
+          <iframe id="ar-modal-iframe" src="" title="Annual Report Preview" allow="autoplay"></iframe>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- WhatsApp Floating Trading Desk Widget -->
+  <!-- WhatsApp Floating Trading Desk Widget - Right Side Placement -->
   <div class="whatsapp-widget-container" id="whatsapp-trading-widget">
     <div class="whatsapp-chat-popup" id="whatsapp-chat-popup">
       <div class="wa-popup-header">
@@ -1762,7 +1797,7 @@
         </div>
         <div class="wa-header-info">
           <h5>Asia Siyaka Trading Desk</h5>
-          <p><span style="color:#25d366;">●</span> Online | Tea & Commodity Broking</p>
+          <p><span style="color:#25d366; font-size:14px;">●</span> Online | Tea &amp; Commodity Broking</p>
         </div>
         <button id="wa-popup-close-btn" class="wa-popup-close" aria-label="Close chat popup">&times;</button>
       </div>
@@ -1773,33 +1808,36 @@
         <div class="wa-preset-options">
           <button class="wa-preset-btn" data-msg="I would like to inquire about the upcoming Colombo Tea Auction catalog and lot samples.">
             <span>🍵 Colombo Tea Auction Catalog</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="ph ph-caret-right"></i>
           </button>
           <button class="wa-preset-btn" data-msg="Please send me the latest Weekly Market Report for Tea, Rubber, and Spices.">
             <span>📈 Weekly Market Report</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="ph ph-caret-right"></i>
           </button>
           <button class="wa-preset-btn" data-msg="I have an inquiry regarding Asia Siyaka Annual Reports and Investor Relations.">
-            <span>📄 Investor & Annual Report</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <span>📄 Investor &amp; Annual Report</span>
+            <i class="ph ph-caret-right"></i>
           </button>
-          <button class="wa-preset-btn" data-msg="I am interested in Ceylon spices & rubber brokering services.">
-            <span>🌿 Rubber & Spices Brokering</span>
-            <i class="fa-solid fa-chevron-right"></i>
+          <button class="wa-preset-btn" data-msg="I am interested in Ceylon spices &amp; rubber brokering services.">
+            <span>🌿 Rubber &amp; Spices Brokering</span>
+            <i class="ph ph-caret-right"></i>
           </button>
         </div>
       </div>
       <div class="wa-popup-footer">
         <a id="wa-start-chat-btn" href="#" class="wa-start-btn" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" style="flex-shrink:0;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.56 14.39C16.31 14.26 15.09 13.66 14.86 13.58C14.64 13.49 14.47 13.45 14.31 13.7C14.14 13.95 13.67 14.51 13.53 14.67C13.38 14.84 13.24 14.86 12.99 14.73C12.74 14.61 11.93 14.35 10.98 13.5C10.24 12.84 9.74 12.03 9.6 11.78C9.45 11.53 9.58 11.4 9.71 11.27C9.82 11.16 9.96 10.98 10.09 10.83C10.22 10.68 10.26 10.57 10.35 10.4C10.43 10.24 10.39 10.09 10.33 9.97C10.26 9.84 9.76 8.62 9.56 8.11C9.36 7.62 9.15 7.69 9 7.69C8.86 7.68 8.69 7.68 8.52 7.68C8.36 7.68 8.08 7.74 7.85 7.99C7.62 8.24 6.98 8.84 6.98 10.06C6.98 11.28 7.87 12.45 8 12.62C8.12 12.79 9.75 15.3 12.24 16.38C12.83 16.64 13.29 16.79 13.65 16.91C14.25 17.1 14.79 17.07 15.22 17.01C15.7 16.94 16.69 16.41 16.9 15.82C17.11 15.24 17.11 14.74 17.04 14.63C16.98 14.51 16.81 14.45 16.56 14.39Z"/></svg>
+          <span>Chat on WhatsApp</span>
         </a>
       </div>
     </div>
 
     <button id="whatsapp-toggle-btn" class="whatsapp-float-btn" aria-label="Chat with Asia Siyaka on WhatsApp">
       <div class="whatsapp-pulse-ring"></div>
-      <i class="fa-brands fa-whatsapp"></i>
-      <span class="whatsapp-tooltip">Chat with Asia Siyaka Broker</span>
+      <svg class="wa-btn-svg" viewBox="0 0 24 24" width="34" height="34" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.56 14.39C16.31 14.26 15.09 13.66 14.86 13.58C14.64 13.49 14.47 13.45 14.31 13.7C14.14 13.95 13.67 14.51 13.53 14.67C13.38 14.84 13.24 14.86 12.99 14.73C12.74 14.61 11.93 14.35 10.98 13.5C10.24 12.84 9.74 12.03 9.6 11.78C9.45 11.53 9.58 11.4 9.71 11.27C9.82 11.16 9.96 10.98 10.09 10.83C10.22 10.68 10.26 10.57 10.35 10.4C10.43 10.24 10.39 10.09 10.33 9.97C10.26 9.84 9.76 8.62 9.56 8.11C9.36 7.62 9.15 7.69 9 7.69C8.86 7.68 8.69 7.68 8.52 7.68C8.36 7.68 8.08 7.74 7.85 7.99C7.62 8.24 6.98 8.84 6.98 10.06C6.98 11.28 7.87 12.45 8 12.62C8.12 12.79 9.75 15.3 12.24 16.38C12.83 16.64 13.29 16.79 13.65 16.91C14.25 17.1 14.79 17.07 15.22 17.01C15.7 16.94 16.69 16.41 16.9 15.82C17.11 15.24 17.11 14.74 17.04 14.63C16.98 14.51 16.81 14.45 16.56 14.39Z"/>
+      </svg>
+      <span class="whatsapp-tooltip">Chat with Asia Siyaka Broker Desk</span>
     </button>
   </div>
 
@@ -1821,6 +1859,8 @@
 
   <!--<< Theme Enhancements JS (Currency Slider, Reports Reader, Language Switcher, WhatsApp) >>-->
   <script src="assets/js/theme-enhancements.js"></script>
+  <!--<< Ceylon Tea Leaves Floating Canvas Animation >>-->
+  <script src="assets/js/tea-leaves-animation.js"></script>
 </body>
 
 <!-- Mirrored from asiasiyaka-one.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:24:44 GMT -->
