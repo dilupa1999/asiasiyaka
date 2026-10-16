@@ -401,6 +401,26 @@ h1, h2, h3, h4, h5, h6 {
     text-align: justify !important;
 }
 
+/* Always show the text + image inside the report cards */
+.report-card .report-reveal {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+.report-card .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.report-card .report-reveal {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.report-card .report-reveal img {
+    margin-top: auto !important;
+}
+
 
 /* =========================================================
    BRAND SECTION (brand-section-3)
@@ -451,13 +471,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .letter-image-section .drone-shape {
+    text-align: center;
     margin-top: -200px;
 }
 
 /* Move ONLY the cup image down */
 .letter-image-section .drone-shape > img {
     position: relative;
-    top: 420px;            /* pahalata yana pramanaya */
+    top: 420px;
+    width: 600px;      /* size eka methana wenas karanna */
+    height: auto;   
+    margin: 0 auto;
+    display: block;
+             
 }
 
 @media (max-width: 1399px) {
