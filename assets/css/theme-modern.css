@@ -80,10 +80,10 @@ section.section-padding.fix.pb-0 {
   height: 52px;
   width: auto;
   object-fit: contain;
-  border-radius: 8px;
- 
-  padding: 3px 6px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  border-radius: 0px;
+ background: transparent;
+  padding: 0px 0px;
+  box-shadow: none;
   transition: transform 0.25s ease;
 }
 
@@ -155,9 +155,14 @@ section.section-padding.fix.pb-0 {
   color: var(--as-gold);
 }
 
+
+.lang-btn .lang-globe {
+  color: var(--as-gold);
+  flex-shrink: 0;
+}
+
 .lang-btn .lang-caret {
-  font-size: 10px;
-  transition: transform 0.25s ease;
+  flex-shrink: 0;
 }
 
 .lang-dropdown {
@@ -612,7 +617,7 @@ body {
 
 .ar-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 

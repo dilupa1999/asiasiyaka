@@ -222,10 +222,18 @@
             <!-- Language Selector Dropdown -->
             <div class="lang-selector-wrapper">
               <button type="button" class="lang-btn" aria-label="Select Language">
-                <i class="fa-solid fa-globe"></i>
-                <span id="current-lang-text">EN</span>
-                <i class="fa-solid fa-chevron-down lang-caret"></i>
-              </button>
+  <svg class="lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M2 12h20"/>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </svg>
+  <span id="current-lang-text">EN</span>
+  <svg class="lang-caret" width="12" height="12" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+</button>
               <div class="lang-dropdown">
                 <a href="#" class="lang-item active" data-lang="en"><span class="flag">🇬🇧</span> English <span class="native">EN</span></a>
                 <a href="#" class="lang-item" data-lang="si"><span class="flag">🇱🇰</span> Sinhala <span class="native">සිංහල</span></a>
