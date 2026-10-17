@@ -462,6 +462,58 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.06);
 }
 
+/* Service Slider (Global Exports) Forward & Backward Navigation Arrows */
+.service-content-3 .arrow-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 36px;
+}
+
+.service-content-3 .arrow-button .array-prev,
+.service-content-3 .arrow-button .array-next {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background-color: var(--white) !important;
+    color: var(--theme3, #11A21B) !important;
+    border: 1.5px solid #e2e8f0 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out !important;
+    padding: 0 !important;
+}
+
+.service-content-3 .arrow-button .array-prev svg,
+.service-content-3 .arrow-button .array-next svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    transition: transform 0.25s ease, stroke 0.3s ease;
+}
+
+.service-content-3 .arrow-button .array-prev:hover,
+.service-content-3 .arrow-button .array-next:hover {
+    background-color: var(--theme3, #11A21B) !important;
+    color: #ffffff !important;
+    border-color: var(--theme3, #11A21B) !important;
+    box-shadow: 0 6px 16px rgba(17, 162, 27, 0.25);
+    transform: translateY(-2px);
+}
+
+.service-content-3 .arrow-button .array-prev:hover svg {
+    transform: translateX(-3px);
+}
+
+.service-content-3 .arrow-button .array-next:hover svg {
+    transform: translateX(3px);
+}
+
 
 /* =========================================================
    BRAND SECTION (brand-section-3)

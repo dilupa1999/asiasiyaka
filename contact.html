@@ -3,7 +3,6 @@
   <!--<< Header Area >>-->
 
   
-<!-- Mirrored from asiasiyaka-one.vercel.app/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:25:27 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <!-- ========== Meta Tags ========== -->
@@ -21,6 +20,8 @@
     <link rel="shortcut icon" href="assets/img/logo/asia-siyaka-logo.png" />
     <!--<< Bootstrap min.css >>-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!--<< All Min Css >>-->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!--<< Animate.css >>-->
@@ -102,6 +103,16 @@
             rgba(0, 0, 0, 0.45) 65%,
             rgba(0, 0, 0, 0) 100%
           );
+        }
+      }
+      /* Reduced hero section height for Contact Us */
+      .breadcrumb-wrapper .page-heading {
+        padding: 150px 0 50px !important;
+      }
+      @media (max-width: 1399px) {
+        .breadcrumb-wrapper .page-heading {
+          padding-top: 100px !important;
+          padding-bottom: 50px !important;
         }
       }
     </style>
@@ -616,6 +627,30 @@
           </div>
         </section>
 
+        <!-- Map Section -->
+        <section class="map-section section-padding">
+          <div class="container">
+            <h2 class="text-center mb-5">Visit Our Locations</h2>
+            <div id="map"></div>
+            <div class="row g-4 mt-4">
+              <div class="col-md-6">
+                <div class="card p-4 h-100 shadow-sm border-0">
+                  <h5>Head Office – Colombo</h5>
+                  <p>Deutsche House Building, 320 T. B. Jayah Mawatha, Colombo 01000, Sri Lanka</p>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Deutsche+House+Building%2C+320+T.+B.+Jayah+Mawatha%2C+Colombo+01000%2C+Sri+Lanka" target="_blank" class="theme-btn mt-3">Get Directions</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card p-4 h-100 shadow-sm border-0">
+                  <h5>Warehouse – Wattala</h5>
+                  <p>No. 95, Ella Road, Hendala, Wattala, Sri Lanka</p>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=No.+95%2C+Ella+Road%2C+Hendala%2C+Wattala%2C+Sri+Lanka" target="_blank" class="theme-btn mt-3">Get Directions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Footer Section Start -->
         <footer
           class="footer-section-3 bg-cover"
@@ -923,7 +958,10 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Map JS -->
+    <script src="assets/js/contact-map.js"></script>
   </body>
 
-<!-- Mirrored from asiasiyaka-one.vercel.app/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2026 04:25:28 GMT -->
 </html>
