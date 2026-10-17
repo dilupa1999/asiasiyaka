@@ -62,6 +62,57 @@
     `).join('');
   }
 
+  async function fetchCBSLRates() {
+    try {
+      const response = await fetch('https://allratestoday.com/api/open/central-bank/cbsl');
+      if (!response.ok) throw new Error('CBSL rate endpoint returned status ' + response.status);
+      const data = await response.json();
+
+      if (!data || !Array.isArray(data.rates)) return;
+
+      const cbslMap = {};
+      data.rates.forEach(r => {
+        if (r.base && r.value) {
+          cbslMap[r.base] = parseFloat(r.value);
+        }
+      });
+
+      // Update currencyRates with live CBSL figures
+      currencyRates.forEach(item => {
+        const match = item.code.match(/^([0-9,]*\s*)?([A-Z]{3})\s*\/\s*LKR/);
+        if (match) {
+          const multiplier = match[1] ? parseFloat(match[1].replace(/,/g, '').trim()) : 1;
+          const currencyCode = match[2];
+
+          if (cbslMap[currencyCode]) {
+            const newRateNum = cbslMap[currencyCode] * multiplier;
+            const prevRateNum = parseFloat(item.rate.replace(/,/g, ''));
+            if (!isNaN(prevRateNum) && prevRateNum > 0) {
+              const diffPercent = ((newRateNum - prevRateNum) / prevRateNum) * 100;
+              item.change = (diffPercent >= 0 ? '+' : '') + diffPercent.toFixed(2) + '%';
+              item.isUp = diffPercent >= 0;
+            }
+            item.rate = newRateNum >= 10 ? newRateNum.toFixed(2) : newRateNum.toFixed(3);
+          }
+        }
+      });
+
+      // Re-render tracks with updated CBSL rates
+      const track1 = document.getElementById('fx-track-1');
+      const track2 = document.getElementById('fx-track-2');
+      if (track1) renderCurrencyTrack(track1, currencyRates);
+      if (track2) renderCurrencyTrack(track2, [...currencyRates].reverse());
+
+      // Update badge with official CBSL date
+      const badgeText = document.querySelector('.fx-live-badge span:last-child');
+      if (badgeText && data.rate_date) {
+        badgeText.textContent = `CBSL Official Indicative Rates (${data.rate_date})`;
+      }
+    } catch (err) {
+      console.warn('Unable to load live CBSL rates, using baseline rates:', err);
+    }
+  }
+
   function initCurrencyTickers() {
     const track1 = document.getElementById('fx-track-1');
     const track2 = document.getElementById('fx-track-2');
@@ -72,6 +123,9 @@
       // Reverse order for second row for visual variety
       renderCurrencyTrack(track2, [...currencyRates].reverse());
     }
+
+    // Fetch official CBSL rates and update tracks
+    fetchCBSLRates();
 
     // Live Colombo time badge
     const timeEl = document.getElementById('fx-live-time');

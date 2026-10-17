@@ -421,6 +421,47 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: auto !important;
 }
 
+/* Ensure the arrow action button is a perfect circle and never squished into an ellipse */
+.report-card a.rounded-circle {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    min-height: 56px !important;
+    max-width: 56px !important;
+    max-height: 56px !important;
+    aspect-ratio: 1 / 1 !important;
+    flex: 0 0 56px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    align-self: flex-start !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    color: var(--header) !important;
+    border: 2px solid currentColor !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+/* When the card is hovered or active, change the button circle & arrow to white */
+.report-card:hover a.rounded-circle,
+.report-card.active a.rounded-circle,
+.feature-box-item-2:hover a.rounded-circle,
+.feature-box-item-2.active a.rounded-circle {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* When the button circle itself is hovered */
+.report-card a.rounded-circle:hover {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: scale(1.06);
+}
+
 
 /* =========================================================
    BRAND SECTION (brand-section-3)

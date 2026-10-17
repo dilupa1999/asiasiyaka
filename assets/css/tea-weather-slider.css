@@ -1,0 +1,357 @@
+/* Weather and Tea Regions Slider
+   Uses Times New Roman to match the site's font preference. */
+
+.tea-weather-section {
+  --tea-green: #123f30;
+  --tea-green-dark: #0d3025;
+  --tea-cream: #fbfaf4;
+  --tea-gold: #b08a43;
+  --tea-muted: #68716b;
+  padding: 54px 0 48px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 5%, rgba(169, 190, 139, 0.15), transparent 28%),
+    radial-gradient(ellipse at 90% 95%, rgba(169, 190, 139, 0.15), transparent 28%),
+    var(--tea-cream);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tea-weather-section *,
+.tea-weather-section *::before,
+.tea-weather-section *::after {
+  box-sizing: border-box;
+}
+
+.tea-weather-container {
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.tea-weather-heading {
+  text-align: center;
+  margin: 0 auto 34px;
+}
+
+.tea-weather-eyebrow {
+  display: block;
+  color: var(--tea-gold);
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.tea-weather-heading h2 {
+  color: var(--tea-green-dark);
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0 0 12px;
+}
+
+.tea-weather-heading p {
+  color: #5f655f;
+  font-size: clamp(15px, 1.7vw, 19px);
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.tea-weather-slider {
+  position: relative;
+  padding: 0 42px;
+}
+
+.tea-weather-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tea-weather-track {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  transition: transform 420ms ease;
+  will-change: transform;
+}
+
+.tea-weather-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e7e1d2;
+  border-radius: 15px;
+  background: #fffef9;
+  box-shadow: 0 12px 28px rgba(32, 54, 40, 0.09);
+}
+
+.tea-weather-image-wrap {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  background: #e7eadf;
+}
+
+.tea-weather-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.tea-weather-card:hover .tea-weather-image {
+  transform: scale(1.04);
+}
+
+.tea-weather-image-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  place-items: center;
+  color: var(--tea-green);
+  font-size: 40px;
+  background: linear-gradient(135deg, #e9eee2, #cbd9bd);
+}
+
+.tea-weather-card-body {
+  padding: 18px 18px 0;
+}
+
+.tea-weather-card h3 {
+  color: var(--tea-green-dark);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 23px;
+  line-height: 1.2;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.tea-weather-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 70px;
+  padding-bottom: 17px;
+}
+
+.tea-weather-icon {
+  width: 58px;
+  flex: 0 0 58px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.tea-weather-temperature-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.tea-weather-temperature-block strong {
+  color: #183c30;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.tea-weather-temperature-block span {
+  color: var(--tea-muted);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.tea-weather-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 -18px;
+  border-top: 1px solid #eee9dc;
+  background: rgba(248, 247, 239, 0.75);
+}
+
+.tea-weather-metric {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 8px;
+  min-width: 0;
+}
+
+.tea-weather-metric + .tea-weather-metric {
+  border-left: 1px solid #e9e3d5;
+}
+
+.tea-weather-metric-icon {
+  color: #3989bd;
+  font-family: sans-serif;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.tea-weather-metric div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+
+.tea-weather-metric strong {
+  color: #253c33;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.tea-weather-metric div span {
+  color: var(--tea-muted);
+  font-size: 14px;
+}
+
+.tea-weather-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--tea-green);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 31px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(18, 63, 48, 0.2);
+  transition: background 180ms ease, opacity 180ms ease;
+}
+
+.tea-weather-arrow:hover:not(:disabled) {
+  background: #1c5a43;
+}
+
+.tea-weather-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.tea-weather-prev {
+  left: 0;
+}
+
+.tea-weather-next {
+  right: 0;
+}
+
+.tea-weather-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 27px;
+}
+
+.tea-weather-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8cdc5;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.tea-weather-dot.active {
+  background: var(--tea-green);
+  transform: scale(1.2);
+}
+
+.tea-weather-dot:focus-visible,
+.tea-weather-arrow:focus-visible {
+  outline: 3px solid var(--tea-gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 991px) {
+  .tea-weather-card {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+
+  .tea-weather-image-wrap {
+    height: 165px;
+  }
+
+  .tea-weather-container {
+    width: min(100% - 32px, 760px);
+  }
+}
+
+@media (max-width: 575px) {
+  .tea-weather-section {
+    padding: 38px 0 34px;
+  }
+
+  .tea-weather-container {
+    width: calc(100% - 24px);
+  }
+
+  .tea-weather-heading {
+    margin-bottom: 26px;
+  }
+
+  .tea-weather-heading p {
+    letter-spacing: 0.3px;
+  }
+
+  .tea-weather-slider {
+    padding: 0 28px;
+  }
+
+  .tea-weather-track {
+    gap: 12px;
+  }
+
+  .tea-weather-card {
+    flex-basis: 100%;
+  }
+
+  .tea-weather-image-wrap {
+    height: 190px;
+  }
+
+  .tea-weather-card-body {
+    padding: 16px 16px 0;
+  }
+
+  .tea-weather-card h3 {
+    font-size: 22px;
+  }
+
+  .tea-weather-metrics {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+
+  .tea-weather-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 26px;
+  }
+
+  .tea-weather-dots {
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tea-weather-track,
+  .tea-weather-image,
+  .tea-weather-dot,
+  .tea-weather-arrow {
+    transition: none;
+  }
+}

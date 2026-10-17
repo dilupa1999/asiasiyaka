@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <!--<< Home Page Css >>-->
   <link rel="stylesheet" href="assets/css/home.css" />
-  <!--<< Tea Regions Component Css >>-->
-  <link rel="stylesheet" href="assets/css/tea-regions.css" />
+  <!--<< Tea Regions Weather Slider Css >>-->
+  <link rel="stylesheet" href="assets/css/tea-weather-slider.css" />
   <!--<< Modern Theme & Custom Enhancements Css >>-->
   <link rel="stylesheet" href="assets/css/theme-modern.css" />
 </head>
@@ -473,17 +473,44 @@
           </div>
         </div>
       </section>
-      <!-- Weather and Tea Regions Component Start -->
-      <section class="section-padding fix">
-        <div class="container">
-          <h2 class="mb-4 text-center">Weather and Tea Regions</h2>
-          <div id="tabs" class="region-tabs d-flex flex-wrap gap-2 mb-4 justify-content-center" role="tablist"></div>
-          <div id="panel" class="info-panel p-4 border rounded" role="tabpanel"></div>
+      <!-- Weather and Tea Regions Slider Start -->
+      <section class="tea-weather-section">
+        <div class="tea-weather-container">
+          <div class="tea-weather-heading">
+            <span class="tea-weather-eyebrow" aria-hidden="true">✦</span>
+            <h2>Weather and Tea Regions</h2>
+            <p>Explore the climate across Sri Lanka’s finest tea regions</p>
+          </div>
+
+          <div class="tea-weather-slider" aria-label="Tea region weather">
+            <button
+              class="tea-weather-arrow tea-weather-prev"
+              type="button"
+              aria-label="Previous tea regions"
+            >&#8249;</button>
+
+            <div class="tea-weather-viewport">
+              <div id="tea-weather-track" class="tea-weather-track"></div>
+            </div>
+
+            <button
+              class="tea-weather-arrow tea-weather-next"
+              type="button"
+              aria-label="Next tea regions"
+            >&#8250;</button>
+          </div>
+
+          <div
+            id="tea-weather-dots"
+            class="tea-weather-dots"
+            aria-label="Choose a tea region slide"
+          ></div>
         </div>
-        <script src="assets/js/tea-regions-data.js"></script>
-        <script src="assets/js/tea-regions.js"></script>
       </section>
-      <!-- Weather and Tea Regions Component End -->
+      <!-- Weather and Tea Regions Slider End -->
+
+      <script src="assets/js/tea-weather-data.js"></script>
+      <script src="assets/js/tea-weather-slider.js"></script>
 
       <!-- Global Currency & Export Commodity Rates Start -->
       <section class="fx-ticker-section scroll-reveal" id="global-currency-rates">
@@ -492,11 +519,11 @@
             <div>
               <div class="fx-live-badge">
                 <span class="fx-pulse-dot"></span>
-                <span>Live Colombo Auction FX Ticker</span>
+                <span>Live Colombo Auction FX Ticker · CBSL Rates</span>
               </div>
               <h3 class="fx-ticker-title">Ceylon Tea Global Currency Exchange Monitor</h3>
               <p class="fx-ticker-subtitle">
-                Official exchange rates (LKR benchmark) across major international buyer destinations for Ceylon Tea
+                Official exchange rates (Central Bank of Sri Lanka indicative benchmark) across major international buyer destinations for Ceylon Tea
               </p>
             </div>
             <div class="text-md-end">
@@ -942,13 +969,7 @@
                   </div>
                 </div>
                 <a href="https://asiasiyaka.lk/market-report/" target="_blank" rel="noopener"
-                  class="d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
-                  style="
-                      width: 56px;
-                      height: 56px;
-                      color: var(--header);
-                      border-color: currentColor !important;
-                    " aria-label="View Market Report"><i class="ph ph-arrow-right"></i></a>
+                  class="rounded-circle mt-4" aria-label="View Market Report"><i class="ph ph-arrow-right"></i></a>
               </div>
             </div>
             <div class="col-lg-4 tp_fade_anim" data-delay=".5" data-fade-from="left">
@@ -982,13 +1003,8 @@
                       class="img-fluid d-block mx-auto w-50" />
                   </div>
                 </div>
-                <a href="#annual-reports" class="open-annual-report-trigger d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
-                  style="
-                      width: 56px;
-                      height: 56px;
-                      color: var(--header);
-                      border-color: currentColor !important;
-                    " aria-label="Read Annual Reports"><i class="ph ph-arrow-right"></i></a>
+                <a href="#annual-reports" class="open-annual-report-trigger rounded-circle mt-4"
+                  aria-label="Read Annual Reports"><i class="ph ph-arrow-right"></i></a>
               </div>
             </div>
             <div class="col-lg-4 tp_fade_anim" data-delay=".7" data-fade-from="left">
@@ -1027,13 +1043,7 @@
                   </div>
                 </div>
                 <a href="https://asiasiyaka.lk/reports/" target="_blank" rel="noopener"
-                  class="d-inline-flex align-items-center justify-content-center rounded-circle border border-2 mt-4"
-                  style="
-                      width: 56px;
-                      height: 56px;
-                      color: var(--header);
-                      border-color: currentColor !important;
-                    " aria-label="View Special Report"><i class="ph ph-arrow-right"></i></a>
+                  class="rounded-circle mt-4" aria-label="View Special Report"><i class="ph ph-arrow-right"></i></a>
               </div>
             </div>
           </div>
