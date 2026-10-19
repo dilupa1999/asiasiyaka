@@ -30,9 +30,16 @@
 section.section-padding,
 .service-section-3.section-padding,
 .about-section-3.section-padding,
-.footer-section-3 {
+section.section-padding,
+.service-section-3.section-padding,
+.about-section-3.section-padding {
   padding-top: 60px !important;
   padding-bottom: 60px !important;
+}
+
+.footer-section-3 {
+  padding-top: 40px !important;
+  padding-bottom: 20px !important;
 }
 
 section.section-padding.pb-0,
