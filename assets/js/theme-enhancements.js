@@ -16,24 +16,24 @@
      Export destinations for Ceylon Tea
      ========================================================================== */
   const currencyRates = [
-    { country: 'United States', flag: '🇺🇸', code: 'USD / LKR', rate: '301.85', change: '+0.28%', isUp: true, tag: 'Global Benchmark' },
-    { country: 'United Kingdom', flag: '🇬🇧', code: 'GBP / LKR', rate: '398.40', change: '+0.34%', isUp: true, tag: 'Traditional Orthodox Market' },
-    { country: 'Germany', flag: '🇩🇪', code: 'EUR / LKR', rate: '335.20', change: '+0.42%', isUp: true, tag: 'EU Specialty Buyer' },
-    { country: 'Japan', flag: '🇯🇵', code: '100 JPY / LKR', rate: '202.15', change: '-0.12%', isUp: false, tag: 'Premium High-Grown' },
-    { country: 'Russia', flag: '🇷🇺', code: 'RUB / LKR', rate: '3.28', change: '+0.15%', isUp: true, tag: 'Top Volume Importer' },
-    { country: 'Iraq', flag: '🇮🇶', code: '1,000 IQD / LKR', rate: '230.40', change: '+0.08%', isUp: true, tag: '#1 Ceylon Tea Importer' },
-    { country: 'China', flag: '🇨🇳', code: 'CNY / LKR', rate: '42.65', change: '+0.22%', isUp: true, tag: 'Fast-Growing Black Tea' },
-    { country: 'United Arab Emirates', flag: '🇦🇪', code: 'AED / LKR', rate: '82.20', change: '+0.15%', isUp: true, tag: 'Middle East Re-Export Hub' },
-    { country: 'Libya', flag: '🇱🇾', code: 'LYD / LKR', rate: '62.15', change: '-0.05%', isUp: false, tag: 'North Africa Key Buyer' },
-    { country: 'Saudi Arabia', flag: '🇸🇦', code: 'SAR / LKR', rate: '80.45', change: '+0.18%', isUp: true, tag: 'GCC Orthodox Consumer' },
-    { country: 'Jordan', flag: '🇯🇴', code: 'JOD / LKR', rate: '425.80', change: '+0.12%', isUp: true, tag: 'Levant Regional Market' },
-    { country: 'Syria', flag: '🇸🇾', code: '1,000 SYP / LKR', rate: '23.25', change: '+0.04%', isUp: true, tag: 'Longstanding Ceylon Buyer' },
-    { country: 'Chile', flag: '🇨🇱', code: '1,000 CLP / LKR', rate: '328.75', change: '-0.26%', isUp: false, tag: 'South America Orthodox' },
-    { country: 'Taiwan', flag: '🇹🇼', code: 'TWD / LKR', rate: '9.48', change: '+0.06%', isUp: true, tag: 'High-Elevation Teas' },
-    { country: 'Poland', flag: '🇵🇱', code: 'PLN / LKR', rate: '79.10', change: '+0.25%', isUp: true, tag: 'Central Europe Hub' },
-    { country: 'Iran', flag: '🇮🇷', code: '10,000 IRR / LKR', rate: '71.90', change: '+0.02%', isUp: true, tag: 'Historic Trading Corridor' },
-    { country: 'Ireland', flag: '🇮🇪', code: 'EUR / LKR', rate: '335.20', change: '+0.42%', isUp: true, tag: 'Highest Per-Capita Tea' },
-    { country: 'Hong Kong', flag: '🇭🇰', code: 'HKD / LKR', rate: '38.70', change: '+0.10%', isUp: true, tag: 'East Asia Financial Gate' }
+    { country: 'United States', flag: 'ðŸ‡ºðŸ‡¸', code: 'USD / LKR', rate: '301.85', change: '+0.28%', isUp: true, tag: 'Global Benchmark' },
+    { country: 'United Kingdom', flag: 'ðŸ‡¬ðŸ‡§', code: 'GBP / LKR', rate: '398.40', change: '+0.34%', isUp: true, tag: 'Traditional Orthodox Market' },
+    { country: 'Germany', flag: 'ðŸ‡©ðŸ‡ª', code: 'EUR / LKR', rate: '335.20', change: '+0.42%', isUp: true, tag: 'EU Specialty Buyer' },
+    { country: 'Japan', flag: 'ðŸ‡¯ðŸ‡µ', code: '100 JPY / LKR', rate: '202.15', change: '-0.12%', isUp: false, tag: 'Premium High-Grown' },
+    { country: 'Russia', flag: 'ðŸ‡·ðŸ‡º', code: 'RUB / LKR', rate: '3.28', change: '+0.15%', isUp: true, tag: 'Top Volume Importer' },
+    { country: 'Iraq', flag: 'ðŸ‡®ðŸ‡¶', code: '1,000 IQD / LKR', rate: '230.40', change: '+0.08%', isUp: true, tag: '#1 Ceylon Tea Importer' },
+    { country: 'China', flag: 'ðŸ‡¨ðŸ‡³', code: 'CNY / LKR', rate: '42.65', change: '+0.22%', isUp: true, tag: 'Fast-Growing Black Tea' },
+    { country: 'United Arab Emirates', flag: 'ðŸ‡¦ðŸ‡ª', code: 'AED / LKR', rate: '82.20', change: '+0.15%', isUp: true, tag: 'Middle East Re-Export Hub' },
+    { country: 'Libya', flag: 'ðŸ‡±ðŸ‡¾', code: 'LYD / LKR', rate: '62.15', change: '-0.05%', isUp: false, tag: 'North Africa Key Buyer' },
+    { country: 'Saudi Arabia', flag: 'ðŸ‡¸ðŸ‡¦', code: 'SAR / LKR', rate: '80.45', change: '+0.18%', isUp: true, tag: 'GCC Orthodox Consumer' },
+    { country: 'Jordan', flag: 'ðŸ‡¯ðŸ‡´', code: 'JOD / LKR', rate: '425.80', change: '+0.12%', isUp: true, tag: 'Levant Regional Market' },
+    { country: 'Syria', flag: 'ðŸ‡¸ðŸ‡¾', code: '1,000 SYP / LKR', rate: '23.25', change: '+0.04%', isUp: true, tag: 'Longstanding Ceylon Buyer' },
+    { country: 'Chile', flag: 'ðŸ‡¨ðŸ‡±', code: '1,000 CLP / LKR', rate: '328.75', change: '-0.26%', isUp: false, tag: 'South America Orthodox' },
+    { country: 'Taiwan', flag: 'ðŸ‡¹ðŸ‡¼', code: 'TWD / LKR', rate: '9.48', change: '+0.06%', isUp: true, tag: 'High-Elevation Teas' },
+    { country: 'Poland', flag: 'ðŸ‡µðŸ‡±', code: 'PLN / LKR', rate: '79.10', change: '+0.25%', isUp: true, tag: 'Central Europe Hub' },
+    { country: 'Iran', flag: 'ðŸ‡®ðŸ‡·', code: '10,000 IRR / LKR', rate: '71.90', change: '+0.02%', isUp: true, tag: 'Historic Trading Corridor' },
+    { country: 'Ireland', flag: 'ðŸ‡®ðŸ‡ª', code: 'EUR / LKR', rate: '335.20', change: '+0.42%', isUp: true, tag: 'Highest Per-Capita Tea' },
+    { country: 'Hong Kong', flag: 'ðŸ‡­ðŸ‡°', code: 'HKD / LKR', rate: '38.70', change: '+0.10%', isUp: true, tag: 'East Asia Financial Gate' }
   ];
 
   function renderCurrencyTrack(trackEl, items) {
@@ -150,7 +150,7 @@
     { name: 'Team Work', icon: 'fa-users', color: '#e25fa8', desc: 'Seamless collaborative synergy between brokers, expert master tea tasters, warehouse custodians, and estate managers.' },
     { name: 'Trust', icon: 'fa-handshake', color: '#ef5350', desc: 'The bedrock of 25+ years of grower relationships, reliable settlement custody, and fiduciary financial integrity.' },
     { name: 'Loyalty', icon: 'fa-heart', color: '#ec9a0c', desc: 'Enduring devotion to client prosperity, long-term buyer alliances, and continuous support to Ceylon tea smallholders.' },
-    { name: 'Ethical', icon: 'fa-scale-balanced', color: '#a8a20a', desc: 'Strict compliance with Colombo Tea Traders’ Association statutory rules and sustainable international trade practices.' },
+    { name: 'Ethical', icon: 'fa-scale-balanced', color: '#a8a20a', desc: 'Strict compliance with Colombo Tea Tradersâ€™ Association statutory rules and sustainable international trade practices.' },
     { name: 'Proficiency', icon: 'fa-award', color: '#1fa89a', desc: 'World-recognized tea sensory mastery, accurate catalogue lot evaluations, and industry-leading market intelligence.' }
   ];
 
@@ -196,6 +196,7 @@
   const annualReports = [
     {
       year: '2026',
+      pdfUrl: 'assets/pdfs/2026.pdf',
       title: '2026 Annual Report',
       theme: 'Pioneering Horizons & Sustainable Excellence',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2026/08/2026-N.webp',
@@ -215,6 +216,7 @@
     },
     {
       year: '2025',
+      pdfUrl: 'assets/pdfs/2025.pdf',
       title: '2025 Annual Report',
       theme: 'Navigating New Global Corridors',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2025/08/Asia-Siyaka-Commodities-PLC-AR-2024-25-Final-4.png',
@@ -234,6 +236,7 @@
     },
     {
       year: '2024',
+      pdfUrl: 'assets/pdfs/2024.pdf',
       title: '2024 Annual Report',
       theme: 'Resilience, Digital Transformation & Trust',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2024/08/2024-MK-3.png',
@@ -253,8 +256,9 @@
     },
     {
       year: '2023',
+      pdfUrl: 'assets/pdfs/2023.pdf',
       title: '2023 Annual Report',
-      theme: 'Silver Jubilee — 25 Years of Market Stewardship',
+      theme: 'Silver Jubilee â€” 25 Years of Market Stewardship',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2024/10/2023.png',
       driveId: '1XcEj6lszlY2CGRyyLoh_11UvDVr81Wbz',
       highlights: { revenue: 'Rs. 1.41 Bn', volume: '33.9 Mn Kg', growth: '+11.5%', cse: 'ASIY.N0000', netProfit: 'Rs. 240 Mn', dividend: 'Rs. 0.30 / share', marketShare: '14.9%' },
@@ -272,6 +276,7 @@
     },
     {
       year: '2022',
+      pdfUrl: 'assets/pdfs/2022.pdf',
       title: '2022 Annual Report',
       theme: 'Excellence in Commodity Broking',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2023/05/2022-ANNUAL-REPORT.png',
@@ -291,6 +296,7 @@
     },
     {
       year: '2021',
+      pdfUrl: 'assets/pdfs/2021.pdf',
       title: '2021 Annual Report',
       theme: 'Sustainable Value Creation Across Supply Chains',
       cover: 'https://asiasiyaka.lk/wp-content/uploads/2023/05/2021-ANNUAL-REPORT-Asia-Siyaka.png',
@@ -310,6 +316,33 @@
     }
   ];
 
+
+  const pdfReader = { document: null, loadingTask: null, page: 1, renderToken: 0 };
+  function isPdfSpread() { return window.innerWidth >= 900; }
+  function setPdfStatus(message) { const status = document.getElementById('ar-pdf-status'); if (status) status.textContent = message; }
+  function updatePdfControls() {
+    const previous = document.getElementById('ar-pdf-prev'); const next = document.getElementById('ar-pdf-next'); const indicator = document.getElementById('ar-pdf-page-indicator'); const count = pdfReader.document ? pdfReader.document.numPages : 0; const lastVisiblePage = Math.min(pdfReader.page + (isPdfSpread() ? 1 : 0), count);
+    if (previous) previous.disabled = !count || pdfReader.page <= 1; if (next) next.disabled = !count || lastVisiblePage >= count;
+    if (indicator) indicator.textContent = count ? `Pages ${pdfReader.page}${lastVisiblePage > pdfReader.page ? `–${lastVisiblePage}` : ''} of ${count}` : 'Loading document…';
+  }
+  async function renderPdfPage(canvas, pageNumber, targetWidth) {
+    const page = await pdfReader.document.getPage(pageNumber); const naturalViewport = page.getViewport({ scale: 1 }); const stage = document.getElementById('ar-pdf-stage'); const maximumHeight = Math.max((stage ? stage.clientHeight : 560) - 32, 260); const scale = Math.min(targetWidth / naturalViewport.width, maximumHeight / naturalViewport.height); const viewport = page.getViewport({ scale: Math.max(scale, 0.35) }); const density = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(viewport.width * density); canvas.height = Math.floor(viewport.height * density); canvas.style.width = `${Math.floor(viewport.width)}px`; canvas.style.height = `${Math.floor(viewport.height)}px`;
+    await page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport, transform: density === 1 ? null : [density, 0, 0, density, 0, 0] }).promise;
+  }
+  async function renderPdfSpread() {
+    if (!pdfReader.document) return; const token = ++pdfReader.renderToken; const stage = document.getElementById('ar-pdf-stage'); const firstCanvas = document.getElementById('ar-pdf-page-one'); const secondCanvas = document.getElementById('ar-pdf-page-two'); const secondWrap = document.getElementById('ar-pdf-page-two-wrap'); if (!stage || !firstCanvas || !secondCanvas || !secondWrap) return;
+    const spread = isPdfSpread(); const secondPage = pdfReader.page + 1; secondWrap.hidden = !spread || secondPage > pdfReader.document.numPages; const pageWidth = Math.max((stage.clientWidth - (spread ? 44 : 24)) / (spread ? 2 : 1), 240);
+    try { await renderPdfPage(firstCanvas, pdfReader.page, pageWidth); if (token !== pdfReader.renderToken) return; if (!secondWrap.hidden) await renderPdfPage(secondCanvas, secondPage, pageWidth); if (token !== pdfReader.renderToken) return; setPdfStatus(''); updatePdfControls(); }
+    catch (error) { if (token !== pdfReader.renderToken) return; console.error('Unable to render annual report PDF.', error); setPdfStatus('This PDF preview could not be rendered. Use “Open PDF” to read the document.'); }
+  }
+  async function loadPdfPreview(url) {
+    destroyPdfPreview(); if (typeof pdfjsLib === 'undefined') { setPdfStatus('Document preview is unavailable. Use “Open PDF” to read the document.'); return; }
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; setPdfStatus('Loading document preview…'); updatePdfControls();
+    try { pdfReader.loadingTask = pdfjsLib.getDocument(url); pdfReader.document = await pdfReader.loadingTask.promise; pdfReader.page = 1; await renderPdfSpread(); }
+    catch (error) { console.error('Unable to load annual report PDF.', error); setPdfStatus('This PDF preview could not be loaded. Use “Open PDF” to read the document.'); }
+  }
+  function destroyPdfPreview() { pdfReader.renderToken += 1; if (pdfReader.loadingTask) pdfReader.loadingTask.destroy(); if (pdfReader.document) pdfReader.document.destroy(); pdfReader.document = null; pdfReader.loadingTask = null; pdfReader.page = 1; }
   function getReportData(identifier) {
     if (!identifier) return annualReports[0];
     return annualReports.find(r => r.year === identifier || r.driveId === identifier) || annualReports[0];
@@ -369,7 +402,6 @@
   function openReportModal(identifier) {
     const report = getReportData(identifier);
     const modal = document.getElementById('ar-reader-modal');
-    const iframe = document.getElementById('ar-modal-iframe');
     const titleEl = document.getElementById('ar-modal-report-title');
     const externalLink = document.getElementById('ar-modal-external-link');
     const fallbackLink = document.getElementById('ar-embed-fallback-link');
@@ -377,14 +409,15 @@
 
     if (!modal) return;
 
-    if (titleEl) titleEl.textContent = `Asia Siyaka Commodities PLC — ${report.title}`;
+    if (titleEl) titleEl.textContent = `Asia Siyaka Commodities PLC â€” ${report.title}`;
+    const pdfUrl = report.pdfUrl;
     const driveViewUrl = `https://drive.google.com/file/d/${report.driveId}/view?usp=sharing`;
-    const driveEmbedUrl = `https://drive.google.com/file/d/${report.driveId}/preview`;
-    const driveDownloadUrl = `https://drive.google.com/uc?export=download&id=${report.driveId}`;
+    const driveDownloadUrl = pdfUrl;
+    const localPdfLink = document.getElementById('ar-local-pdf-link');
 
-    if (externalLink) externalLink.href = driveViewUrl;
-    if (fallbackLink) fallbackLink.href = driveViewUrl;
-    if (iframe) iframe.src = driveEmbedUrl;
+    if (externalLink) externalLink.href = pdfUrl;
+    if (localPdfLink) localPdfLink.href = pdfUrl;
+    loadPdfPreview(pdfUrl);
 
     // Render Highlights Tab
     if (highlightsDynamic) {
@@ -508,7 +541,6 @@
 
     const modal = document.getElementById('ar-reader-modal');
     const closeBtn = document.getElementById('ar-modal-close-btn');
-    const iframe = document.getElementById('ar-modal-iframe');
     const tabHighlightsBtn = document.getElementById('ar-tab-highlights-btn');
     const tabPdfBtn = document.getElementById('ar-tab-pdf-btn');
 
@@ -516,7 +548,7 @@
 
     function closeModal() {
       modal.classList.remove('show');
-      if (iframe) iframe.src = '';
+      destroyPdfPreview();
       document.body.style.overflow = '';
     }
 
@@ -531,9 +563,10 @@
     if (tabHighlightsBtn) {
       tabHighlightsBtn.addEventListener('click', () => switchModalTab('highlights'));
     }
-    if (tabPdfBtn) {
-      tabPdfBtn.addEventListener('click', () => switchModalTab('pdf'));
-    }
+    if (tabPdfBtn) { tabPdfBtn.addEventListener('click', () => switchModalTab('pdf')); }
+    document.getElementById('ar-pdf-prev')?.addEventListener('click', () => { if (!pdfReader.document) return; pdfReader.page = Math.max(1, pdfReader.page - (isPdfSpread() ? 2 : 1)); renderPdfSpread(); });
+    document.getElementById('ar-pdf-next')?.addEventListener('click', () => { if (!pdfReader.document) return; const step = isPdfSpread() ? 2 : 1; const lastStart = isPdfSpread() ? Math.max(1, pdfReader.document.numPages - 1) : pdfReader.document.numPages; pdfReader.page = Math.min(lastStart, pdfReader.page + step); renderPdfSpread(); });
+    window.addEventListener('resize', () => { if (pdfReader.document) renderPdfSpread(); });
 
     // Global Event Delegation for all report clicks
     document.addEventListener('click', (e) => {
@@ -583,101 +616,101 @@
      ========================================================================== */
   const translations = {
     si: {
-      'Home': 'මුල් පිටුව',
-      'About Us': 'අප ගැන',
-      'Service': 'සේවා',
-      'Tea': 'තේ තැරැව්කාර සේවය',
-      'Rubber': 'රබර් තැරැව්කාර සේවය',
-      'Commodities': 'වෙළඳ භාණ්ඩ හා කුළුබඩු',
-      'Warehouse': 'ගබඩා පහසුකම්',
-      'Logistics': 'ප්‍රවාහන හා සැපයුම්',
-      'Paper Sacks': 'කඩදාසි මලු',
-      'Pages': 'පිටු',
-      'News': 'පුවත්',
-      'Contact Us': 'අප හා සම්බන්ධ වන්න',
-      'Tea Regions of Sri Lanka': 'ශ්‍රී ලංකාවේ තේ කලාප',
-      'Annual Report': 'වාර්ෂික වාර්තාව',
-      'Reports': 'වෙළඳ වාර්තා',
-      'Explore More': 'තවත් ගවේෂණය කරන්න',
-      'Speak With Expert': 'විශේෂඥයෙකු අමතන්න'
+      'Home': 'à¶¸à·”à¶½à·Š à¶´à·’à¶§à·”à·€',
+      'About Us': 'à¶…à¶´ à¶œà·à¶±',
+      'Service': 'à·ƒà·šà·€à·',
+      'Tea': 'à¶­à·š à¶­à·à¶»à·à·€à·Šà¶šà·à¶» à·ƒà·šà·€à¶º',
+      'Rubber': 'à¶»à¶¶à¶»à·Š à¶­à·à¶»à·à·€à·Šà¶šà·à¶» à·ƒà·šà·€à¶º',
+      'Commodities': 'à·€à·™à·…à¶³ à¶·à·à¶«à·Šà¶© à·„à· à¶šà·”à·…à·”à¶¶à¶©à·”',
+      'Warehouse': 'à¶œà¶¶à¶©à· à¶´à·„à·ƒà·”à¶šà¶¸à·Š',
+      'Logistics': 'à¶´à·Šâ€à¶»à·€à·à·„à¶± à·„à· à·ƒà·à¶´à¶ºà·”à¶¸à·Š',
+      'Paper Sacks': 'à¶šà¶©à¶¯à·à·ƒà·’ à¶¸à¶½à·”',
+      'Pages': 'à¶´à·’à¶§à·”',
+      'News': 'à¶´à·”à·€à¶­à·Š',
+      'Contact Us': 'à¶…à¶´ à·„à· à·ƒà¶¸à·Šà¶¶à¶±à·Šà¶° à·€à¶±à·Šà¶±',
+      'Tea Regions of Sri Lanka': 'à·à·Šâ€à¶»à·“ à¶½à¶‚à¶šà·à·€à·š à¶­à·š à¶šà¶½à·à¶´',
+      'Annual Report': 'à·€à·à¶»à·Šà·‚à·’à¶š à·€à·à¶»à·Šà¶­à·à·€',
+      'Reports': 'à·€à·™à·…à¶³ à·€à·à¶»à·Šà¶­à·',
+      'Explore More': 'à¶­à·€à¶­à·Š à¶œà·€à·šà·‚à¶«à¶º à¶šà¶»à¶±à·Šà¶±',
+      'Speak With Expert': 'à·€à·’à·à·šà·‚à¶¥à¶ºà·™à¶šà·” à¶…à¶¸à¶­à¶±à·Šà¶±'
     },
     ta: {
-      'Home': 'முகப்பு',
-      'About Us': 'எங்களை பற்றி',
-      'Service': 'சேவைகள்',
-      'Tea': 'தேயிலை தரகு சேவை',
-      'Rubber': 'ரப்பர் தரகு சேவை',
-      'Commodities': 'பொருட்கள் மற்றும் வாசனை திரவியங்கள்',
-      'Warehouse': 'கிடங்கு சேவைகள்',
-      'Logistics': 'தளவாடங்கள்',
-      'Paper Sacks': 'காகித பைகள்',
-      'Pages': 'பக்கங்கள்',
-      'News': 'செய்திகள்',
-      'Contact Us': 'தொடர்புகொள்ள',
-      'Tea Regions of Sri Lanka': 'இலங்கையின் தேயிலை பிராந்தியங்கள்',
-      'Annual Report': 'ஆண்டு அறிக்கை',
-      'Reports': 'சந்தை அறிக்கைகள்'
+      'Home': 'à®®à¯à®•à®ªà¯à®ªà¯',
+      'About Us': 'à®Žà®™à¯à®•à®³à¯ˆ à®ªà®±à¯à®±à®¿',
+      'Service': 'à®šà¯‡à®µà¯ˆà®•à®³à¯',
+      'Tea': 'à®¤à¯‡à®¯à®¿à®²à¯ˆ à®¤à®°à®•à¯ à®šà¯‡à®µà¯ˆ',
+      'Rubber': 'à®°à®ªà¯à®ªà®°à¯ à®¤à®°à®•à¯ à®šà¯‡à®µà¯ˆ',
+      'Commodities': 'à®ªà¯Šà®°à¯à®Ÿà¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®µà®¾à®šà®©à¯ˆ à®¤à®¿à®°à®µà®¿à®¯à®™à¯à®•à®³à¯',
+      'Warehouse': 'à®•à®¿à®Ÿà®™à¯à®•à¯ à®šà¯‡à®µà¯ˆà®•à®³à¯',
+      'Logistics': 'à®¤à®³à®µà®¾à®Ÿà®™à¯à®•à®³à¯',
+      'Paper Sacks': 'à®•à®¾à®•à®¿à®¤ à®ªà¯ˆà®•à®³à¯',
+      'Pages': 'à®ªà®•à¯à®•à®™à¯à®•à®³à¯',
+      'News': 'à®šà¯†à®¯à¯à®¤à®¿à®•à®³à¯',
+      'Contact Us': 'à®¤à¯Šà®Ÿà®°à¯à®ªà¯à®•à¯Šà®³à¯à®³',
+      'Tea Regions of Sri Lanka': 'à®‡à®²à®™à¯à®•à¯ˆà®¯à®¿à®©à¯ à®¤à¯‡à®¯à®¿à®²à¯ˆ à®ªà®¿à®°à®¾à®¨à¯à®¤à®¿à®¯à®™à¯à®•à®³à¯',
+      'Annual Report': 'à®†à®£à¯à®Ÿà¯ à®…à®±à®¿à®•à¯à®•à¯ˆ',
+      'Reports': 'à®šà®¨à¯à®¤à¯ˆ à®…à®±à®¿à®•à¯à®•à¯ˆà®•à®³à¯'
     },
     zh: {
-      'Home': '首页',
-      'About Us': '关于我们',
-      'Service': '核心服务',
-      'Tea': '茶叶经纪',
-      'Rubber': '橡胶经纪',
-      'Commodities': '大宗农产品',
-      'Warehouse': '绿色仓储',
-      'Logistics': '物流供应链',
-      'Contact Us': '联系我们',
-      'Tea Regions of Sri Lanka': '斯里兰卡锡兰红茶产区',
-      'Annual Report': '年度报告'
+      'Home': 'é¦–é¡µ',
+      'About Us': 'å…³äºŽæˆ‘ä»¬',
+      'Service': 'æ ¸å¿ƒæœåŠ¡',
+      'Tea': 'èŒ¶å¶ç»çºª',
+      'Rubber': 'æ©¡èƒ¶ç»çºª',
+      'Commodities': 'å¤§å®—å†œäº§å“',
+      'Warehouse': 'ç»¿è‰²ä»“å‚¨',
+      'Logistics': 'ç‰©æµä¾›åº”é“¾',
+      'Contact Us': 'è”ç³»æˆ‘ä»¬',
+      'Tea Regions of Sri Lanka': 'æ–¯é‡Œå…°å¡é”¡å…°çº¢èŒ¶äº§åŒº',
+      'Annual Report': 'å¹´åº¦æŠ¥å‘Š'
     },
     ja: {
-      'Home': 'ホーム',
-      'About Us': '会社概要',
-      'Service': 'サービス',
-      'Tea': '紅茶ブローカー',
-      'Rubber': '天然ゴム',
-      'Commodities': '香辛料・農産物',
-      'Warehouse': '倉庫管理',
-      'Contact Us': 'お問い合わせ',
-      'Tea Regions of Sri Lanka': 'スリランカの紅茶産地',
-      'Annual Report': '年次報告書'
+      'Home': 'ãƒ›ãƒ¼ãƒ ',
+      'About Us': 'ä¼šç¤¾æ¦‚è¦',
+      'Service': 'ã‚µãƒ¼ãƒ“ã‚¹',
+      'Tea': 'ç´…èŒ¶ãƒ–ãƒ­ãƒ¼ã‚«ãƒ¼',
+      'Rubber': 'å¤©ç„¶ã‚´ãƒ ',
+      'Commodities': 'é¦™è¾›æ–™ãƒ»è¾²ç”£ç‰©',
+      'Warehouse': 'å€‰åº«ç®¡ç†',
+      'Contact Us': 'ãŠå•ã„åˆã‚ã›',
+      'Tea Regions of Sri Lanka': 'ã‚¹ãƒªãƒ©ãƒ³ã‚«ã®ç´…èŒ¶ç”£åœ°',
+      'Annual Report': 'å¹´æ¬¡å ±å‘Šæ›¸'
     },
     ar: {
-      'Home': 'الرئيسية',
-      'About Us': 'من نحن',
-      'Service': 'الخدمات',
-      'Tea': 'وساطة الشاي',
-      'Rubber': 'وساطة المطاط',
-      'Commodities': 'التوابل والسلع',
-      'Warehouse': 'المستودعات',
-      'Contact Us': 'اتصل بنا',
-      'Tea Regions of Sri Lanka': 'مناطق شاي سيلان',
-      'Annual Report': 'التقرير السنوي'
+      'Home': 'Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©',
+      'About Us': 'Ù…Ù† Ù†Ø­Ù†',
+      'Service': 'Ø§Ù„Ø®Ø¯Ù…Ø§Øª',
+      'Tea': 'ÙˆØ³Ø§Ø·Ø© Ø§Ù„Ø´Ø§ÙŠ',
+      'Rubber': 'ÙˆØ³Ø§Ø·Ø© Ø§Ù„Ù…Ø·Ø§Ø·',
+      'Commodities': 'Ø§Ù„ØªÙˆØ§Ø¨Ù„ ÙˆØ§Ù„Ø³Ù„Ø¹',
+      'Warehouse': 'Ø§Ù„Ù…Ø³ØªÙˆØ¯Ø¹Ø§Øª',
+      'Contact Us': 'Ø§ØªØµÙ„ Ø¨Ù†Ø§',
+      'Tea Regions of Sri Lanka': 'Ù…Ù†Ø§Ø·Ù‚ Ø´Ø§ÙŠ Ø³ÙŠÙ„Ø§Ù†',
+      'Annual Report': 'Ø§Ù„ØªÙ‚Ø±ÙŠØ± Ø§Ù„Ø³Ù†ÙˆÙŠ'
     },
     ru: {
-      'Home': 'Главная',
-      'About Us': 'О компании',
-      'Service': 'Услуги',
-      'Tea': 'Брокеридж чая',
-      'Rubber': 'Каучук',
-      'Commodities': 'Пряности и сырье',
-      'Warehouse': 'Склады',
-      'Contact Us': 'Контакты',
-      'Tea Regions of Sri Lanka': 'Чайные регионы Шри-Ланки',
-      'Annual Report': 'Годовой отчет'
+      'Home': 'Ð“Ð»Ð°Ð²Ð½Ð°Ñ',
+      'About Us': 'Ðž ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸',
+      'Service': 'Ð£ÑÐ»ÑƒÐ³Ð¸',
+      'Tea': 'Ð‘Ñ€Ð¾ÐºÐµÑ€Ð¸Ð´Ð¶ Ñ‡Ð°Ñ',
+      'Rubber': 'ÐšÐ°ÑƒÑ‡ÑƒÐº',
+      'Commodities': 'ÐŸÑ€ÑÐ½Ð¾ÑÑ‚Ð¸ Ð¸ ÑÑ‹Ñ€ÑŒÐµ',
+      'Warehouse': 'Ð¡ÐºÐ»Ð°Ð´Ñ‹',
+      'Contact Us': 'ÐšÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ñ‹',
+      'Tea Regions of Sri Lanka': 'Ð§Ð°Ð¹Ð½Ñ‹Ðµ Ñ€ÐµÐ³Ð¸Ð¾Ð½Ñ‹ Ð¨Ñ€Ð¸-Ð›Ð°Ð½ÐºÐ¸',
+      'Annual Report': 'Ð“Ð¾Ð´Ð¾Ð²Ð¾Ð¹ Ð¾Ñ‚Ñ‡ÐµÑ‚'
     },
     de: {
       'Home': 'Startseite',
-      'About Us': 'Über Uns',
+      'About Us': 'Ãœber Uns',
       'Service': 'Dienstleistungen',
       'Tea': 'Teebroking',
       'Rubber': 'Kautschuk',
-      'Commodities': 'Gewürze & Rohstoffe',
-      'Warehouse': 'Lagerhäuser',
+      'Commodities': 'GewÃ¼rze & Rohstoffe',
+      'Warehouse': 'LagerhÃ¤user',
       'Contact Us': 'Kontakt',
       'Tea Regions of Sri Lanka': 'Tee-Regionen Sri Lankas',
-      'Annual Report': 'Geschäftsbericht'
+      'Annual Report': 'GeschÃ¤ftsbericht'
     }
   };
 

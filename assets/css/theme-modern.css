@@ -1974,3 +1974,17 @@ body {
     padding: 16px;
   }
 }
+
+/* Local annual-report reader: page-by-page horizontal spread */
+#ar-pane-pdf { overflow: hidden; background: #eef2ed; }
+.ar-pdf-toolbar { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: #fff; border-bottom: 1px solid #dce5dc; }
+.ar-pdf-page-indicator { min-width: 130px; text-align: center; color: #33513a; font-size: 12px; font-weight: 700; }
+.ar-pdf-nav-btn { display: inline-flex; align-items: center; gap: 5px; border: 1px solid #c8d7cb; background: #fff; color: #0d4a1c; border-radius: 7px; padding: 7px 11px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.ar-pdf-nav-btn:hover:not(:disabled) { background: #e7f1e9; }
+.ar-pdf-nav-btn:disabled { opacity: .45; cursor: not-allowed; }
+.ar-pdf-toolbar .ar-fallback-btn { margin-left: auto; }
+.ar-pdf-stage { flex: 1; min-height: 0; display: flex; justify-content: center; align-items: center; gap: 20px; overflow: hidden; padding: 16px 12px; background: #dce3dc; }
+.ar-pdf-page { display: flex; justify-content: center; align-items: center; max-width: calc(50% - 10px); height: 100%; }
+.ar-pdf-page canvas { display: block; max-width: 100%; max-height: 100%; background: #fff; box-shadow: 0 5px 18px rgba(18, 38, 22, .22); }
+.ar-pdf-status { min-height: 20px; margin: 0; padding: 3px 14px 8px; text-align: center; color: #536456; font-size: 12px; background: #eef2ed; }
+@media (max-width: 899.98px) { .ar-pdf-toolbar { flex-wrap: wrap; justify-content: center; } .ar-pdf-toolbar .ar-fallback-btn { margin-left: 0; } .ar-pdf-page { max-width: 100%; } .ar-pdf-stage { padding: 12px; } }
