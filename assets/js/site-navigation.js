@@ -78,7 +78,7 @@
       '    </ul>',
       '  </li>',
       '  <li><a href="index.html#annual-reports">Annual Reports</a></li>',
-      '  <li' + active.news + '><a href="news.html">Blog</a></li>',
+      '  <li' + active.news + '><a href="news.html">News</a></li>',
       '  <li' + active.contact + '><a href="contact.html">Contact Us</a></li>',
       '</ul>'
     ].join('');
