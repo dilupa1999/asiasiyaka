@@ -328,6 +328,9 @@
       <div class="ar-card" data-year="${r.year}" data-drive-id="${r.driveId}">
         <div class="ar-card-thumb-wrap">
           <img src="${r.cover}" alt="${r.title}" loading="lazy" onerror="this.src='assets/img/asia-siyaka/about-tea-plantation.jpg';" />
+          <div class="ar-card-overlay">
+            <span class="ar-year-badge">${r.year}</span>
+          </div>
         </div>
         <div class="ar-card-body">
           <h3 class="ar-card-title">${r.title}</h3>

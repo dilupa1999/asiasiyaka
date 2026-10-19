@@ -590,37 +590,22 @@
     ================================ */
 
    if ($('.testimonial-slider-3').length > 0) {
-    const TestimonialSlider3 = new Swiper(".testimonial-slider-3", {
-        spaceBetween: 30,
-        speed: 1300,
-        loop: true,
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".array-next",
-            prevEl: ".array-prev",
-        },
-        breakpoints: {
-            1199: {
-                slidesPerView: 2,
-            },
-            991: {
-                slidesPerView: 1,
-            },
-            767: {
-                slidesPerView: 1,
-            },
-            575: {
-                slidesPerView: 1,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
-    });
-   }
+     const TestimonialSlider3 = new Swiper(".testimonial-slider-3", {
+         slidesPerView: "auto",
+         spaceBetween: 16,
+         speed: 1300,
+         loop: true,
+         navigation: {
+             nextEl: ".array-next",
+             prevEl: ".array-prev",
+         },
+         breakpoints: {
+             0: { spaceBetween: 12 },
+             768: { spaceBetween: 16 },
+             1200: { spaceBetween: 16 },
+         },
+     });
+    }
    
     
 

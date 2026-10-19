@@ -26,6 +26,22 @@
     return { label: "Weather update", icon: "🌤️", effect: "mainly-clear" };
   }
 
+  function windLevel(speed) {
+    if (speed >= 28) return "strong";
+    if (speed >= 14) return "moderate";
+    return "calm";
+  }
+
+  function particleMarkup(count, className) {
+    return Array.from({ length: count }, (_, index) => {
+      const left = (index * 37 + 11) % 100;
+      const delay = ((index * 0.17) % 2.4).toFixed(2);
+      const duration = (0.55 + (index % 8) * 0.14).toFixed(2);
+      const scale = (0.55 + (index % 6) * 0.18).toFixed(2);
+      return `<span class="${className}" style="--x:${left}%;--d:${delay}s;--t:${duration}s;--s:${scale}"></span>`;
+    }).join("");
+  }
+
   function cardsVisible() {
     if (window.matchMedia("(max-width: 575px)").matches) return 1;
     if (window.matchMedia("(max-width: 991px)").matches) return 2;
@@ -56,13 +72,19 @@
           loading="${index < 5 ? "eager" : "lazy"}"
         >
         <div class="tea-weather-image-fallback" aria-hidden="true">🌿</div>
-        <div class="tea-weather-fx" data-weather-fx="${region.id}" aria-hidden="true">
+        <div class="tea-weather-fx" data-weather-fx="${region.id}" data-effect="" data-day="1" data-wind="calm" aria-hidden="true">
+          <span class="tea-weather-fx-sky"></span>
           <span class="tea-weather-fx-sun"></span>
+          <span class="tea-weather-fx-moon"></span>
           <span class="tea-weather-fx-cloud tea-weather-fx-cloud-a"></span>
           <span class="tea-weather-fx-cloud tea-weather-fx-cloud-b"></span>
           <span class="tea-weather-fx-cloud tea-weather-fx-cloud-c"></span>
-          <span class="tea-weather-fx-precip"></span>
+          <span class="tea-weather-fx-cloud tea-weather-fx-cloud-d"></span>
+          <div class="tea-weather-fx-rain">${particleMarkup(30, "tea-weather-drop")}</div>
+          <div class="tea-weather-fx-snow">${particleMarkup(20, "tea-weather-flake")}</div>
           <span class="tea-weather-fx-fog"></span>
+          <span class="tea-weather-fx-bolt tea-weather-fx-bolt-a"></span>
+          <span class="tea-weather-fx-bolt tea-weather-fx-bolt-b"></span>
           <span class="tea-weather-fx-lightning"></span>
         </div>
       </div>
@@ -125,11 +147,16 @@
     });
   }
 
-  function applyWeatherEffect(regionId, effect) {
+  function applyWeatherEffect(regionId, effect, extras = {}) {
     document.querySelectorAll(`[data-weather-fx="${regionId}"]`).forEach((overlay) => {
       overlay.dataset.effect = effect || "";
+      overlay.dataset.day = extras.isDay === 0 ? "0" : "1";
+      overlay.dataset.wind = extras.wind || "calm";
       const wrap = overlay.closest(".tea-weather-image-wrap");
-      if (wrap) wrap.dataset.effect = effect || "";
+      if (wrap) {
+        wrap.dataset.effect = effect || "";
+        wrap.dataset.day = extras.isDay === 0 ? "0" : "1";
+      }
     });
   }
 
@@ -138,7 +165,7 @@
     url.search = new URLSearchParams({
       latitude: region.lat,
       longitude: region.lon,
-      current: "temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m",
+      current: "temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,is_day",
       timezone: "Asia/Colombo"
     }).toString();
 
@@ -155,12 +182,16 @@
       if (!current) throw new Error("Current weather data is missing");
 
       const weather = weatherInfo(current.weather_code);
+      const icon = current.is_day === 0 && weather.effect === "clear" ? "🌙" : weather.icon;
       setText(`[data-weather-temp="${region.id}"]`, `${Math.round(current.temperature_2m)}°C`);
       setText(`[data-weather-condition="${region.id}"]`, weather.label);
-      setText(`[data-weather-icon="${region.id}"]`, weather.icon);
+      setText(`[data-weather-icon="${region.id}"]`, icon);
       setText(`[data-weather-humidity="${region.id}"]`, `${current.relative_humidity_2m}%`);
       setText(`[data-weather-wind="${region.id}"]`, `${Math.round(current.wind_speed_10m)} km/h`);
-      applyWeatherEffect(region.id, weather.effect);
+      applyWeatherEffect(region.id, weather.effect, {
+        isDay: current.is_day,
+        wind: windLevel(current.wind_speed_10m)
+      });
     } catch (error) {
       console.error(`Unable to load weather for ${region.name}:`, error);
       setText(`[data-weather-temp="${region.id}"]`, "--°C");
@@ -183,5 +214,5 @@
 
   createCards();
   refreshAllWeather();
-  setInterval(refreshAllWeather, 5 * 60 * 1000);
+  setInterval(refreshAllWeather, 2 * 60 * 1000);
 })();
