@@ -6708,6 +6708,7 @@ span {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -9.6px;
+  text-align: center;
   animation-duration: 1500ms;
   -webkit-animation-duration: 1500ms;
   margin-bottom: 30px;

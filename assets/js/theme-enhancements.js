@@ -106,7 +106,7 @@
       // Update badge with official CBSL date
       const badgeText = document.querySelector('.fx-live-badge span:last-child');
       if (badgeText && data.rate_date) {
-        badgeText.textContent = `CBSL Official Indicative Rates (${data.rate_date})`;
+        badgeText.textContent = `CBSL Official Indicative Rates`;
       }
     } catch (err) {
       console.warn('Unable to load live CBSL rates, using baseline rates:', err);
@@ -319,17 +319,15 @@
     const gridEl = document.getElementById('ar-reports-grid');
     if (!gridEl) return;
 
-    const filtered = filter === 'all' 
-      ? annualReports 
-      : annualReports.filter(r => r.year === filter);
+    const yearFilter = String(filter || 'all');
+    const filtered = yearFilter === 'all'
+      ? annualReports
+      : annualReports.filter(r => String(r.year) === yearFilter);
 
     gridEl.innerHTML = filtered.map(r => `
-      <div class="ar-card scroll-reveal" data-year="${r.year}" data-drive-id="${r.driveId}">
+      <div class="ar-card" data-year="${r.year}" data-drive-id="${r.driveId}">
         <div class="ar-card-thumb-wrap">
           <img src="${r.cover}" alt="${r.title}" loading="lazy" onerror="this.src='assets/img/asia-siyaka/about-tea-plantation.jpg';" />
-          <div class="ar-card-overlay">
-            <span class="ar-year-badge">${r.year} REPORT</span>
-          </div>
         </div>
         <div class="ar-card-body">
           <h3 class="ar-card-title">${r.title}</h3>
@@ -487,6 +485,24 @@
   }
 
   function initAnnualReportsModal() {
+    renderAnnualReports('all');
+
+    const filterTabs = document.querySelector('.ar-filter-tabs');
+    if (filterTabs) {
+      filterTabs.addEventListener('click', (e) => {
+        const btn = e.target.closest('.ar-filter-btn');
+        if (!btn) return;
+        e.preventDefault();
+        filterTabs.querySelectorAll('.ar-filter-btn').forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        renderAnnualReports(btn.getAttribute('data-filter') || 'all');
+      });
+    }
+
     const modal = document.getElementById('ar-reader-modal');
     const closeBtn = document.getElementById('ar-modal-close-btn');
     const iframe = document.getElementById('ar-modal-iframe');
@@ -515,17 +531,6 @@
     if (tabPdfBtn) {
       tabPdfBtn.addEventListener('click', () => switchModalTab('pdf'));
     }
-
-    // Filter tabs in #annual-reports
-    const filterBtns = document.querySelectorAll('.ar-filter-btn');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const year = btn.getAttribute('data-filter');
-        renderAnnualReports(year);
-      });
-    });
 
     // Global Event Delegation for all report clicks
     document.addEventListener('click', (e) => {
@@ -568,9 +573,6 @@
         }
       }
     });
-
-    // Initial render
-    renderAnnualReports('all');
   }
 
   /* ==========================================================================

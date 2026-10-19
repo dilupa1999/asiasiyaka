@@ -557,10 +557,18 @@ h1, h2, h3, h4, h5, h6 {
 .letter-image-section {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
 
 .letter-image-section .letter-image {
     margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .letter-image-section .drone-shape {

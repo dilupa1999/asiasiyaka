@@ -483,28 +483,10 @@
           </div>
 
           <div class="tea-weather-slider" aria-label="Tea region weather">
-            <button
-              class="tea-weather-arrow tea-weather-prev"
-              type="button"
-              aria-label="Previous tea regions"
-            >&#8249;</button>
-
             <div class="tea-weather-viewport">
               <div id="tea-weather-track" class="tea-weather-track"></div>
             </div>
-
-            <button
-              class="tea-weather-arrow tea-weather-next"
-              type="button"
-              aria-label="Next tea regions"
-            >&#8250;</button>
           </div>
-
-          <div
-            id="tea-weather-dots"
-            class="tea-weather-dots"
-            aria-label="Choose a tea region slide"
-          ></div>
         </div>
       </section>
       <!-- Weather and Tea Regions Slider End -->
@@ -1064,14 +1046,14 @@
                 Our annual reports showcase our commitment to transparency and accountability in every aspect of our business. From sustainability initiatives to financial disclosures, explore and read our audited publications online.
               </p>
             </div>
-            <div class="ar-filter-tabs">
-              <button class="ar-filter-btn active" data-filter="all">All Years</button>
-              <button class="ar-filter-btn" data-filter="2026">2026</button>
-              <button class="ar-filter-btn" data-filter="2025">2025</button>
-              <button class="ar-filter-btn" data-filter="2024">2024</button>
-              <button class="ar-filter-btn" data-filter="2023">2023</button>
-              <button class="ar-filter-btn" data-filter="2022">2022</button>
-              <button class="ar-filter-btn" data-filter="2021">2021</button>
+            <div class="ar-filter-tabs" role="group" aria-label="Filter annual reports by year">
+              <button type="button" class="ar-filter-btn active" data-filter="all" aria-pressed="true">All Years</button>
+              <button type="button" class="ar-filter-btn" data-filter="2026" aria-pressed="false">2026</button>
+              <button type="button" class="ar-filter-btn" data-filter="2025" aria-pressed="false">2025</button>
+              <button type="button" class="ar-filter-btn" data-filter="2024" aria-pressed="false">2024</button>
+              <button type="button" class="ar-filter-btn" data-filter="2023" aria-pressed="false">2023</button>
+              <button type="button" class="ar-filter-btn" data-filter="2022" aria-pressed="false">2022</button>
+              <button type="button" class="ar-filter-btn" data-filter="2021" aria-pressed="false">2021</button>
             </div>
           </div>
 
@@ -1452,11 +1434,12 @@
       </section>
 
       <!-- Letter-Image-Section Start -->
-      <div class="letter-image-section">
-        <div class="letter-image" style="
+      <div class="letter-image-section text-center">
+        <div class="letter-image text-center" style="
               background-image: url(assets/img/asia-siyaka/about-tea-plantation.jpg);
               background-position: center;
               background-size: cover;
+              text-align: center;
             ">
           SIYAKA
         </div>

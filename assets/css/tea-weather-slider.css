@@ -58,24 +58,37 @@
 
 .tea-weather-slider {
   position: relative;
-  padding: 0 42px;
 }
 
 .tea-weather-viewport {
   overflow: hidden;
   width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
 }
 
 .tea-weather-track {
+  --tea-card-width: calc((100% - 72px) / 5);
   display: flex;
   align-items: stretch;
   gap: 18px;
-  transition: transform 420ms ease;
+  width: max-content;
+  animation: teaWeatherSlide 45s linear infinite;
   will-change: transform;
 }
 
+.tea-weather-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes teaWeatherSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .tea-weather-card {
-  flex: 0 0 calc((100% - 36px) / 3);
+  flex: 0 0 var(--tea-card-width);
+  width: var(--tea-card-width);
   min-width: 0;
   overflow: hidden;
   border: 1px solid #e7e1d2;
@@ -85,7 +98,7 @@
 }
 
 .tea-weather-image-wrap {
-  height: 180px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   background: #e7eadf;
@@ -113,6 +126,244 @@
   background: linear-gradient(135deg, #e9eee2, #cbd9bd);
 }
 
+.tea-weather-fx {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tea-weather-fx-sun,
+.tea-weather-fx-cloud,
+.tea-weather-fx-precip,
+.tea-weather-fx-fog,
+.tea-weather-fx-lightning {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tea-weather-image-wrap[data-effect="clear"] .tea-weather-image,
+.tea-weather-image-wrap[data-effect="mainly-clear"] .tea-weather-image {
+  filter: saturate(1.08) brightness(1.06);
+}
+
+.tea-weather-image-wrap[data-effect="overcast"] .tea-weather-image,
+.tea-weather-image-wrap[data-effect="fog"] .tea-weather-image {
+  filter: saturate(0.78) brightness(0.92);
+}
+
+.tea-weather-image-wrap[data-effect="drizzle"] .tea-weather-image,
+.tea-weather-image-wrap[data-effect="showers"] .tea-weather-image {
+  filter: saturate(0.9) brightness(0.94);
+}
+
+.tea-weather-image-wrap[data-effect="rain"] .tea-weather-image,
+.tea-weather-image-wrap[data-effect="thunderstorm"] .tea-weather-image {
+  filter: saturate(0.82) brightness(0.82) contrast(1.05);
+}
+
+.tea-weather-fx[data-effect="clear"] .tea-weather-fx-sun,
+.tea-weather-fx[data-effect="mainly-clear"] .tea-weather-fx-sun {
+  display: block;
+  top: -28%;
+  right: -18%;
+  width: 58%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #fff6c8 0 18%, rgba(255, 214, 90, 0.55) 32%, rgba(255, 196, 70, 0) 70%);
+  box-shadow: 0 0 28px 10px rgba(255, 214, 90, 0.28);
+  animation: teaSunPulse 4.5s ease-in-out infinite;
+}
+
+.tea-weather-fx[data-effect="clear"] .tea-weather-fx-sun::after,
+.tea-weather-fx[data-effect="mainly-clear"] .tea-weather-fx-sun::after {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background: repeating-conic-gradient(from 0deg, rgba(255, 232, 150, 0.28) 0 8deg, transparent 8deg 28deg);
+  animation: teaSunRays 18s linear infinite;
+  opacity: 0.65;
+}
+
+.tea-weather-fx[data-effect="mainly-clear"] .tea-weather-fx-sun {
+  opacity: 0.72;
+}
+
+.tea-weather-fx-cloud {
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.78);
+  filter: blur(1px);
+  box-shadow:
+    18px 8px 0 -4px rgba(255, 255, 255, 0.7),
+    -16px 10px 0 -6px rgba(255, 255, 255, 0.55);
+}
+
+.tea-weather-fx[data-effect="mainly-clear"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="partly-cloudy"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="partly-cloudy"] .tea-weather-fx-cloud-b,
+.tea-weather-fx[data-effect="overcast"] .tea-weather-fx-cloud,
+.tea-weather-fx[data-effect="drizzle"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="drizzle"] .tea-weather-fx-cloud-b,
+.tea-weather-fx[data-effect="rain"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="rain"] .tea-weather-fx-cloud-b,
+.tea-weather-fx[data-effect="showers"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="showers"] .tea-weather-fx-cloud-b,
+.tea-weather-fx[data-effect="thunderstorm"] .tea-weather-fx-cloud,
+.tea-weather-fx[data-effect="snow"] .tea-weather-fx-cloud-a,
+.tea-weather-fx[data-effect="snow"] .tea-weather-fx-cloud-b {
+  display: block;
+}
+
+.tea-weather-fx-cloud-a {
+  top: 10%;
+  left: -30%;
+  width: 46%;
+  height: 22px;
+  animation: teaCloudDrift 16s linear infinite;
+}
+
+.tea-weather-fx-cloud-b {
+  top: 28%;
+  left: -40%;
+  width: 38%;
+  height: 18px;
+  opacity: 0.8;
+  animation: teaCloudDrift 22s linear infinite reverse;
+}
+
+.tea-weather-fx-cloud-c {
+  top: 6%;
+  left: -35%;
+  width: 52%;
+  height: 26px;
+  opacity: 0.7;
+  animation: teaCloudDrift 19s linear infinite;
+}
+
+.tea-weather-fx[data-effect="overcast"] .tea-weather-fx-cloud,
+.tea-weather-fx[data-effect="thunderstorm"] .tea-weather-fx-cloud {
+  background: rgba(186, 196, 206, 0.82);
+  box-shadow:
+    18px 8px 0 -4px rgba(170, 180, 190, 0.7),
+    -16px 10px 0 -6px rgba(150, 160, 170, 0.55);
+}
+
+.tea-weather-fx-precip {
+  inset: -40% 0 0;
+  opacity: 0;
+}
+
+.tea-weather-fx[data-effect="drizzle"] .tea-weather-fx-precip,
+.tea-weather-fx[data-effect="rain"] .tea-weather-fx-precip,
+.tea-weather-fx[data-effect="showers"] .tea-weather-fx-precip,
+.tea-weather-fx[data-effect="thunderstorm"] .tea-weather-fx-precip,
+.tea-weather-fx[data-effect="snow"] .tea-weather-fx-precip {
+  display: block;
+  opacity: 1;
+}
+
+.tea-weather-fx[data-effect="drizzle"] .tea-weather-fx-precip {
+  background-image: repeating-linear-gradient(
+    188deg,
+    transparent 0 14px,
+    rgba(220, 235, 255, 0.42) 14px 15px
+  );
+  background-size: 14px 28px;
+  animation: teaPrecipFall 0.9s linear infinite;
+}
+
+.tea-weather-fx[data-effect="rain"] .tea-weather-fx-precip,
+.tea-weather-fx[data-effect="thunderstorm"] .tea-weather-fx-precip {
+  background-image: repeating-linear-gradient(
+    192deg,
+    transparent 0 9px,
+    rgba(210, 228, 255, 0.7) 9px 11px
+  );
+  background-size: 12px 32px;
+  animation: teaPrecipFall 0.45s linear infinite;
+}
+
+.tea-weather-fx[data-effect="showers"] .tea-weather-fx-precip {
+  background-image: repeating-linear-gradient(
+    190deg,
+    transparent 0 11px,
+    rgba(215, 232, 255, 0.58) 11px 12.5px
+  );
+  background-size: 16px 34px;
+  animation: teaPrecipFall 0.62s linear infinite, teaShowerPulse 3.2s ease-in-out infinite;
+}
+
+.tea-weather-fx[data-effect="snow"] .tea-weather-fx-precip {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 1.2px, transparent 1.6px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1.4px);
+  background-size: 18px 22px, 26px 30px;
+  background-position: 0 0, 10px 12px;
+  animation: teaPrecipFall 2.4s linear infinite;
+}
+
+.tea-weather-fx-fog {
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(236, 240, 244, 0.08), rgba(220, 226, 232, 0.55) 48%, rgba(236, 240, 244, 0.2));
+}
+
+.tea-weather-fx[data-effect="fog"] .tea-weather-fx-fog {
+  display: block;
+  animation: teaFogDrift 7s ease-in-out infinite;
+}
+
+.tea-weather-fx-lightning {
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+.tea-weather-fx[data-effect="thunderstorm"] .tea-weather-fx-lightning {
+  display: block;
+  animation: teaLightning 4.8s steps(1, end) infinite;
+}
+
+@keyframes teaSunPulse {
+  0%, 100% { transform: scale(1); opacity: 0.92; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes teaSunRays {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes teaCloudDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(220%); }
+}
+
+@keyframes teaPrecipFall {
+  from { transform: translateY(-12%); }
+  to { transform: translateY(18%); }
+}
+
+@keyframes teaShowerPulse {
+  0%, 100% { opacity: 0.35; }
+  40%, 70% { opacity: 1; }
+}
+
+@keyframes teaFogDrift {
+  0%, 100% { opacity: 0.55; transform: translateX(-6%); }
+  50% { opacity: 0.85; transform: translateX(8%); }
+}
+
+@keyframes teaLightning {
+  0%, 86%, 100% { background: rgba(255, 255, 255, 0); }
+  87% { background: rgba(255, 255, 255, 0.72); }
+  89% { background: rgba(255, 255, 255, 0.08); }
+  91% { background: rgba(250, 252, 255, 0.55); }
+  93% { background: rgba(255, 255, 255, 0); }
+}
+
 .tea-weather-card-body {
   padding: 18px 18px 0;
 }
@@ -120,9 +371,9 @@
 .tea-weather-card h3 {
   color: var(--tea-green-dark);
   font-family: "Times New Roman", Times, serif;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.2;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   font-weight: 700;
 }
 
@@ -152,7 +403,7 @@
 
 .tea-weather-temperature-block strong {
   color: #183c30;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
 }
 
@@ -174,8 +425,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  padding: 14px 8px;
+  gap: 6px;
+  padding: 12px 6px;
   min-width: 0;
 }
 
@@ -199,7 +450,7 @@
 
 .tea-weather-metric strong {
   color: #253c33;
-  font-size: 16px;
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -208,79 +459,7 @@
   font-size: 14px;
 }
 
-.tea-weather-arrow {
-  position: absolute;
-  top: 45%;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: var(--tea-green);
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 31px;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 5px 14px rgba(18, 63, 48, 0.2);
-  transition: background 180ms ease, opacity 180ms ease;
-}
-
-.tea-weather-arrow:hover:not(:disabled) {
-  background: #1c5a43;
-}
-
-.tea-weather-arrow:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
-
-.tea-weather-prev {
-  left: 0;
-}
-
-.tea-weather-next {
-  right: 0;
-}
-
-.tea-weather-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 27px;
-}
-
-.tea-weather-dot {
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: #c8cdc5;
-  cursor: pointer;
-  transition: background 180ms ease, transform 180ms ease;
-}
-
-.tea-weather-dot.active {
-  background: var(--tea-green);
-  transform: scale(1.2);
-}
-
-.tea-weather-dot:focus-visible,
-.tea-weather-arrow:focus-visible {
-  outline: 3px solid var(--tea-gold);
-  outline-offset: 3px;
-}
-
 @media (max-width: 991px) {
-  .tea-weather-card {
-    flex-basis: calc((100% - 18px) / 2);
-  }
-
   .tea-weather-image-wrap {
     height: 165px;
   }
@@ -307,16 +486,8 @@
     letter-spacing: 0.3px;
   }
 
-  .tea-weather-slider {
-    padding: 0 28px;
-  }
-
   .tea-weather-track {
     gap: 12px;
-  }
-
-  .tea-weather-card {
-    flex-basis: 100%;
   }
 
   .tea-weather-image-wrap {
@@ -336,22 +507,24 @@
     margin-left: -16px;
   }
 
-  .tea-weather-arrow {
-    width: 34px;
-    height: 34px;
-    font-size: 26px;
-  }
-
-  .tea-weather-dots {
-    gap: 8px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tea-weather-track,
-  .tea-weather-image,
-  .tea-weather-dot,
-  .tea-weather-arrow {
+  .tea-weather-track {
+    animation: none;
+    transform: none;
+  }
+
+  .tea-weather-image {
     transition: none;
+  }
+
+  .tea-weather-fx-sun,
+  .tea-weather-fx-sun::after,
+  .tea-weather-fx-cloud,
+  .tea-weather-fx-precip,
+  .tea-weather-fx-fog,
+  .tea-weather-fx-lightning {
+    animation: none !important;
   }
 }
