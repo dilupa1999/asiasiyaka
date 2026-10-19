@@ -35,6 +35,7 @@
 
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/theme-modern.css" />
     <script src="assets/js/site-navigation.js" defer></script>
     <style>
@@ -42,74 +43,17 @@
         width: 180px;
       }
 
-      /* Desktop (1200px+): logo on the left, menu on the right, solid green bar */
-      @media (min-width: 1200px) {
-        .header-1.header-2 .header-main {
-          padding-right: 30px;
-        }
-        .header-1.header-2 .header-main .header-left {
-          padding: 1px 2px 1px 42px;
-        }
-        .header-1.header-2 .header-main .overlay-shape img {
-          width: 100%;
-          height: 100%;
-        }
-        .header-1.header-2 .header-main .header-left .logo img {
-          width: 140px;
-          height: auto;
-        }
-        .header-1.header-2 .header-main .header-right .header-btn {
-          display: none;
-        }
-        .header-1.header-2:not(.sticky) .header-main {
-          background: #0d4a1c;
-          border-radius: 20px;
-        }
-        .header-1.header-2:not(.sticky) .header-main .overlay-shape {
-          display: none;
-        }
-        .header-1.header-2 .header-main .main-menu ul li {
-          margin-inline-end: 0;
-        }
-        .header-1.header-2 .header-main .main-menu ul li a {
-          padding: 0 16px;
+      /* Reduced hero section height for Logistics Services */
+      .breadcrumb-wrapper .page-heading {
+        padding: 150px 0 50px !important;
+      }
+      @media (max-width: 1399px) {
+        .breadcrumb-wrapper .page-heading {
+          padding-top: 100px !important;
+          padding-bottom: 50px !important;
         }
       }
-
-      /* Mobile / Tablet (up to 1199px): logo aligned left, hamburger on the right */
-      @media (max-width: 1199px) {
-        .header-1.header-2 .header-main {
-          position: relative;
-          min-height: 84px;
-        }
-        .header-1.header-2 .header-main .header-left {
-          position: absolute;
-          left: 15px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        .header-1.header-2 .header-main .header-left .logo img {
-          width: 90px;
-          height: auto;
-        }
-        .header-1.header-2 .header-main .header-right {
-          margin-left: auto;
-        }
-        /* Dark shade behind the logo (not applied when the header turns white on scroll) */
-      .header-1.header-2:not(.sticky) {
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.75) 0%,
-          rgba(0, 0, 0, 0.45) 65%,
-          rgba(0, 0, 0, 0) 100%
-        );
-      }
-    }
-    .breadcrumb-wrapper .page-heading {
-      padding-top: 150px !important;
-      padding-bottom: 50px !important;
-    }
-  </style>
+    </style>
 </head>
   <body class="bg-white">
     <!-- Preloader Start -->
@@ -208,122 +152,133 @@
     </div>
     <div class="offcanvas__overlay"></div>
 
-    <!-- Header Section Start -->
-    <header id="header-sticky" class="header-1 header-2">
-      <div class="container-fluid">
-        <div class="mega-menu-wrapper">
-          <div class="header-main header-inner">
-            <div class="overlay-shape">
-              <img src="assets/img/overlay-2.png" alt="img" />
+  <!-- Header Section Start -->
+  <header id="header-sticky" class="header-1 header-2">
+    <div class="container-fluid">
+      <div class="mega-menu-wrapper">
+        <div class="header-main header-inner">
+          <div class="overlay-shape">
+            <img src="assets/img/overlay-2.png" alt="img" />
+          </div>
+          <div class="header-left">
+            <div class="logo">
+              <a href="index.html" class="header-logo">
+                <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" />
+              </a>
+              <a href="index.html" class="header-logo-2">
+                <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" />
+              </a>
             </div>
-            <div class="header-left">
-              <div class="logo">
-                <a href="index.html" class="header-logo">
-                  <img
-                    src="assets/img/logo/asia-siyaka-logo-white.png"
-                    alt="Asia Siyaka Commodities PLC"
-                    width="140"
-                  />
-                </a>
-                <a href="index.html" class="header-logo-2">
-                  <img
-                    src="assets/img/logo/asia-siyaka-logo.png"
-                    alt="Asia Siyaka Commodities PLC"
-                    width="140"
-                  />
-                </a>
+          </div>
+          <div class="header-right d-flex justify-content-end align-items-center">
+            <div class="mean__menu-wrapper">
+              <div class="main-menu">
+                <nav id="mobile-menu">
+                  <ul>
+                    <li class="active">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="about.html">About Us</a>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="#"> Service </a>
+                      <ul class="submenu">
+                        <li class="has-dropdown">
+                          <a href="#">
+                            Brokering
+                            <i class="fas fa-angle-right"></i>
+                          </a>
+                          <ul class="submenu">
+                            <li><a href="tea-brokering.html">Tea</a></li>
+                            <li>
+                              <a href="rubber-brokering.html">Rubber</a>
+                            </li>
+                            <li>
+                              <a href="produce-brokering.html">Commodities</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="has-dropdown">
+                          <a href="#">
+                            Logistics
+                            <i class="fas fa-angle-right"></i>
+                          </a>
+                          <ul class="submenu">
+                            <li>
+                              <a href="warehouse-service.html">Warehouse</a>
+                            </li>
+                            <li>
+                              <a href="logistics-service.html">Logistics</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="has-dropdown">
+                          <a href="#">
+                            Packing Materials
+                            <i class="fas fa-angle-right"></i>
+                          </a>
+                          <ul class="submenu">
+                            <li>
+                              <a href="paper-sacks.html">Paper Sacks</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#annual-reports">Annual Reports</a>
+                    </li>
+                    <li>
+                      <a href="news.html"> News </a>
+                    </li>
+                    <li>
+                      <a href="contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
-            <div
-              class="header-right d-flex justify-content-end align-items-center"
-            >
-              <div class="mean__menu-wrapper">
-                <div class="main-menu">
-                  <nav id="mobile-menu">
-                    <ul>
-                      <li>
-                        <a href="index.html">Home</a>
-                      </li>
-                      <li>
-                        <a href="about.html">About Us</a>
-                      </li>
-                      <li class="has-dropdown active">
-                        <a href="#"> Service </a>
-                        <ul class="submenu">
-                          <li class="has-dropdown">
-                            <a href="#">
-                              Brokering
-                              <i class="fas fa-angle-right"></i>
-                            </a>
-                            <ul class="submenu">
-                              <li><a href="tea-brokering.html">Tea</a></li>
-                              <li>
-                                <a href="rubber-brokering.html">Rubber</a>
-                              </li>
-                              <li>
-                                <a href="produce-brokering.html">Commodities</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="has-dropdown">
-                            <a href="#">
-                              Logistics
-                              <i class="fas fa-angle-right"></i>
-                            </a>
-                            <ul class="submenu">
-                              <li>
-                                <a href="warehouse-service.html">Warehouse</a>
-                              </li>
-                              <li>
-                                <a href="logistics-service.html">Logistics</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="has-dropdown">
-                            <a href="#">
-                              Packing Materials
-                              <i class="fas fa-angle-right"></i>
-                            </a>
-                            <ul class="submenu">
-                              <li>
-                                <a href="paper-sacks.html">Paper Sacks</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="has-dropdown">
-                        <a href="#">
-                          Pages
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="#">Product News</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="news.html"> News </a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Contact Us</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
 
-              <div class="header-btn">
-                <div class="header__hamburger my-auto d-xl-none">
-                  <div class="sidebar__toggle">
-                    <i class="fas fa-bars"></i>
-                  </div>
+            <!-- Language Selector Dropdown -->
+            <div class="lang-selector-wrapper">
+              <button type="button" class="lang-btn" aria-label="Select Language">
+  <svg class="lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M2 12h20"/>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </svg>
+  <span id="current-lang-text">EN</span>
+  <svg class="lang-caret" width="12" height="12" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+</button>
+              <div class="lang-dropdown">
+                <a href="#" class="lang-item active" data-lang="en"><span class="flag">🇬🇧</span> English <span class="native">EN</span></a>
+                <a href="#" class="lang-item" data-lang="si"><span class="flag">🇱🇰</span> Sinhala <span class="native">සිංහල</span></a>
+                <a href="#" class="lang-item" data-lang="ta"><span class="flag">🇮🇳</span> Tamil <span class="native">தமிழ்</span></a>
+                <a href="#" class="lang-item" data-lang="zh"><span class="flag">🇨🇳</span> Chinese <span class="native">中文</span></a>
+                <a href="#" class="lang-item" data-lang="ja"><span class="flag">🇯🇵</span> Japanese <span class="native">日本語</span></a>
+                <a href="#" class="lang-item" data-lang="ar"><span class="flag">🇦🇪</span> Arabic <span class="native">العربية</span></a>
+                <a href="#" class="lang-item" data-lang="ru"><span class="flag">🇷🇺</span> Russian <span class="native">Русский</span></a>
+                <a href="#" class="lang-item" data-lang="de"><span class="flag">🇩🇪</span> German <span class="native">Deutsch</span></a>
+              </div>
+            </div>
+
+            <div class="header-btn">
+              <div class="header__hamburger my-auto d-xl-none">
+                <div class="sidebar__toggle">
+                  <i class="fas fa-bars"></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!-- start: Search Popup -->
     <div class="search_popup">
@@ -407,7 +362,7 @@
             <div class="page-heading">
               <div class="breadcrumb-sub-title">
                 <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                  Logistics Services
+                  
                 </h1>
               </div>
               <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
