@@ -17,9 +17,11 @@
     <!-- ======== Page title ============ -->
     <title>About Us - Asia Siyaka Commodities PLC</title>
     <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="assets/img/logo/asia-siyaka-logo.png" />
+    <link rel="shortcut icon" href="assets/img/logo/user-asia-siyaka-logo.png" />
     <!--<< Bootstrap min.css >>-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--<< Font Awesome 6 >>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!--<< All Min Css >>-->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!--<< Animate.css >>-->
@@ -34,73 +36,16 @@
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!--<< Modern Theme & Custom Enhancements Css >>-->
+    <link rel="stylesheet" href="assets/css/theme-modern.css" />
     <style>
       .farmer-loader {
-        width: 180px;
-      }
-
-      /* Desktop (1200px+): logo on the left, menu on the right, solid green bar */
-      @media (min-width: 1200px) {
-        .header-1.header-2 .header-main {
-          padding-right: 30px;
-        }
-        .header-1.header-2 .header-main .header-left {
-          padding: 1px 2px 1px 42px;
-        }
-        .header-1.header-2 .header-main .overlay-shape img {
-          width: 100%;
-          height: 100%;
-        }
-        .header-1.header-2 .header-main .header-left .logo img {
-          width: 140px;
-          height: auto;
-        }
-        .header-1.header-2 .header-main .header-right .header-btn {
-          display: none;
-        }
-        .header-1.header-2:not(.sticky) .header-main {
-          background: #0d4a1c;
-          border-radius: 20px;
-        }
-        .header-1.header-2:not(.sticky) .header-main .overlay-shape {
-          display: none;
-        }
-        .header-1.header-2 .header-main .main-menu ul li {
-          margin-inline-end: 0;
-        }
-        .header-1.header-2 .header-main .main-menu ul li a {
-          padding: 0 16px;
-        }
-      }
-
-      /* Mobile / Tablet (up to 1199px): logo aligned left, hamburger on the right */
-      @media (max-width: 1199px) {
-        .header-1.header-2 .header-main {
-          position: relative;
-          min-height: 84px;
-        }
-        .header-1.header-2 .header-main .header-left {
-          position: absolute;
-          left: 15px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        .header-1.header-2 .header-main .header-left .logo img {
-          width: 90px;
-          height: auto;
-        }
-        .header-1.header-2 .header-main .header-right {
-          margin-left: auto;
-        }
-        /* Dark shade behind the logo (not applied when the header turns white on scroll) */
-        .header-1.header-2:not(.sticky) {
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.75) 0%,
-            rgba(0, 0, 0, 0.45) 65%,
-            rgba(0, 0, 0, 0) 100%
-          );
-        }
+        height: 64px;
+        width: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        background: #fff;
+        padding: 4px;
       }
       /* Team cards: clean corporate style */
       .team-section-2 .team-card-items-2 {
@@ -167,11 +112,33 @@
       .breadcrumb-wrapper .page-heading {
         padding: 150px 0 50px !important;
       }
-      @media (max-width: 1399px) {
-        .breadcrumb-wrapper .page-heading {
-          padding-top: 100px !important;
-          padding-bottom: 50px !important;
+      /* Our Statistics Section Image Alignment: Start with right-side content header and end with bottom cards */
+      .our-statistics-wrapper .row {
+        align-items: stretch !important;
+      }
+      .our-statistics-wrapper .our-statistics-image {
+        height: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .our-statistics-wrapper .our-statistics-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 12px;
+        display: block;
+      }
+      @media (max-width: 991px) {
+        .our-statistics-wrapper .our-statistics-image {
+          min-height: 380px !important;
         }
+      }
+      .our-statistics-wrapper .our-statistics-content .statistics-card p {
+        margin-bottom: 0;
       }
     </style>
   </head>
@@ -179,11 +146,7 @@
     <!-- Preloader Start -->
     <div id="agri-preloader">
       <div class="preloader-content">
-        <img
-          src="assets/img/logo/asia-siyaka-logo.png"
-          alt="Asia Siyaka Commodities PLC"
-          class="farmer-loader"
-        />
+        <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" class="farmer-loader" style="height: 64px; width: auto; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px;" />
         <h4>Loading Asia Siyaka...</h4>
       </div>
     </div>
@@ -198,12 +161,10 @@
       <div class="offcanvas__info style-2">
         <div class="offcanvas__wrapper">
           <div class="offcanvas__content">
-            <div
-              class="offcanvas__top mb-5 d-flex justify-content-between align-items-center"
-            >
+            <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
               <div class="offcanvas__logo">
                 <a href="index.html">
-                  <img src="assets/img/logo/logo-6.html" alt="logo-img" />
+                  <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" height="64" style="object-fit: contain; border-radius: 8px;" />
                 </a>
               </div>
               <div class="offcanvas__close style-2">
@@ -212,26 +173,19 @@
                 </button>
               </div>
             </div>
-            <p class="text d-none d-xl-block">
-              Asia Siyaka is a leading tea broker and exporter based in Sri
-              Lanka, providing comprehensive services to the Ceylon Tea
-              industry. From plantation management to global marketing, we
-              connect producers with buyers while maintaining the integrity of
-              Sri Lanka's renowned tea heritage.
+            <p class="text d-none d-xl-block" style="text-align: justify;">
+              Asia Siyaka Commodities PLC is a premier Sri Lankan commodity broker handling over 15% of national tea production. With 25+ years of trusted excellence, we provide transparent auction broking, modern warehousing, and global market research across Ceylon Tea, Rubber, and Produce.
             </p>
             <div class="mobile-menu fix mb-3"></div>
             <div class="offcanvas__contact d-xl-block">
-              <h4 class="d-xl-block">Contact Info</h4>
+              <h4 class="d-xl-block">Head Office</h4>
               <ul class="d-xl-block">
                 <li class="d-flex align-items-center">
                   <div class="offcanvas__contact-icon">
                     <i class="fal fa-map-marker-alt"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#"
-                      >Deutsche House Building, 320 T. B. Jayah Mawatha, Colombo
-                      10, Sri Lanka</a
-                    >
+                    <a target="_blank" href="https://maps.google.com/?q=Deutsche+House+Building+320+T.B.+Jayah+Mawatha+Colombo+10">Deutsche House, 320 T. B. Jayah Mawatha, Colombo 10</a>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -239,11 +193,7 @@
                     <i class="fal fa-envelope"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a href="mailto:asc@siyaka.lk"
-                      ><span class="mailto:info@example.com"
-                        >asc@siyaka.lk</span
-                      ></a
-                    >
+                    <a href="mailto:asc@siyaka.lk"><span>asc@siyaka.lk</span></a>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -251,7 +201,7 @@
                     <i class="fal fa-clock"></i>
                   </div>
                   <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#">Mon-Fri, 08:30am - 05:00pm</a>
+                    <span>Mon - Fri, 08:30 AM - 05:00 PM (Auction: Tue/Wed)</span>
                   </div>
                 </li>
                 <li class="d-flex align-items-center">
@@ -263,11 +213,10 @@
                   </div>
                 </li>
               </ul>
-              <div class="social-icon d-flex align-items-center">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <div class="social-icon d-flex align-items-center mt-3">
+                <a href="https://www.facebook.com/asiasiyaka" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/asiasiyaka" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/asia-siyaka-commodities-plc" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -287,24 +236,14 @@
             <div class="header-left">
               <div class="logo">
                 <a href="index.html" class="header-logo">
-                  <img
-                    src="assets/img/logo/asia-siyaka-logo-white.png"
-                    alt="Asia Siyaka Commodities PLC"
-                    width="140"
-                  />
+                  <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" />
                 </a>
                 <a href="index.html" class="header-logo-2">
-                  <img
-                    src="assets/img/logo/asia-siyaka-logo.png"
-                    alt="Asia Siyaka Commodities PLC"
-                    width="140"
-                  />
+                  <img src="assets/img/logo/user-asia-siyaka-logo.png" alt="Asia Siyaka Commodities PLC" />
                 </a>
               </div>
             </div>
-            <div
-              class="header-right d-flex justify-content-end align-items-center"
-            >
+            <div class="header-right d-flex justify-content-end align-items-center">
               <div class="mean__menu-wrapper">
                 <div class="main-menu">
                   <nav id="mobile-menu">
@@ -360,23 +299,44 @@
                           </li>
                         </ul>
                       </li>
-                      <li class="has-dropdown">
-                        <a href="#">
-                          Pages
-                          <i class="fas fa-angle-down"></i>
-                        </a>
-                        <ul class="submenu">
-                          <li><a href="#">Product News</a></li>
-                        </ul>
+                      <li>
+                        <a href="index.html#annual-reports">Annual Reports</a>
                       </li>
                       <li>
-                        <a href="news.html">Blog</a>
+                        <a href="news.html"> Blog </a>
                       </li>
                       <li>
                         <a href="contact.html">Contact Us</a>
                       </li>
                     </ul>
                   </nav>
+                </div>
+              </div>
+
+              <!-- Language Selector Dropdown -->
+              <div class="lang-selector-wrapper">
+                <button type="button" class="lang-btn" aria-label="Select Language">
+                  <svg class="lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M2 12h20"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                  <span id="current-lang-text">EN</span>
+                  <svg class="lang-caret" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6"/>
+                  </svg>
+                </button>
+                <div class="lang-dropdown">
+                  <a href="#" class="lang-item active" data-lang="en"><span class="flag">🇬🇧</span> English <span class="native">EN</span></a>
+                  <a href="#" class="lang-item" data-lang="si"><span class="flag">🇱🇰</span> Sinhala <span class="native">සිංහල</span></a>
+                  <a href="#" class="lang-item" data-lang="ta"><span class="flag">🇮🇳</span> Tamil <span class="native">தமிழ்</span></a>
+                  <a href="#" class="lang-item" data-lang="zh"><span class="flag">🇨🇳</span> Chinese <span class="native">中文</span></a>
+                  <a href="#" class="lang-item" data-lang="ja"><span class="flag">🇯🇵</span> Japanese <span class="native">日本語</span></a>
+                  <a href="#" class="lang-item" data-lang="ar"><span class="flag">🇦🇪</span> Arabic <span class="native">العربية</span></a>
+                  <a href="#" class="lang-item" data-lang="ru"><span class="flag">🇷🇺</span> Russian <span class="native">Русский</span></a>
+                  <a href="#" class="lang-item" data-lang="de"><span class="flag">🇩🇪</span> German <span class="native">Deutsch</span></a>
                 </div>
               </div>
 
@@ -402,7 +362,7 @@
               <div class="search_top d-flex align-items-center">
                 <div class="search_logo">
                   <a href="index.html">
-                    <img src="assets/img/logo/logo-4.html" alt="img" />
+                    <img src="assets/img/logo/asia-siyaka-logo-white.png" alt="Asia Siyaka Commodities PLC" width="140" />
                   </a>
                 </div>
                 <div class="search_close">
@@ -459,16 +419,15 @@
         <!-- Breadcrumb Section Start -->
         <div
           class="breadcrumb-wrapper bg-cover"
-          style="
-            background-image: url(_assets/img/about/about-hero.html);
-          "
+         
+          
         >
           <div class="top-image"></div>
           <div class="container">
             <div class="page-heading">
               <div class="breadcrumb-sub-title">
                 <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                  About Us
+                  
                 </h1>
               </div>
               <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
@@ -590,7 +549,7 @@
                   </div>
                   <div class="content">
                     <h3>Warehouses</h3>
-                    <h4><span class="count">22</span></h4>
+                    <h4><span class="count">2</span></h4>
                   </div>
                 </div>
                 <div class="icon-items wow fadeInUp" data-wow-delay=".6s">
@@ -698,12 +657,12 @@
         >
           <div class="container">
             <div class="our-statistics-wrapper">
-              <div class="row g-4 align-items-center">
-                <div class="col-xl-6 col-lg-5">
-                  <div class="our-statistics-image wow img-custom-anim-left">
+              <div class="row g-4 align-items-stretch">
+                <div class="col-xl-6 col-lg-5 d-flex flex-column">
+                  <div class="our-statistics-image wow img-custom-anim-left flex-grow-1 h-100">
                     <img
                       src="assets/img/about/about-tea-landscape.jpg"
-                      alt="img"
+                      alt="Tea plantation statistics"
                     />
                   </div>
                 </div>
@@ -776,20 +735,13 @@
                       <div class="content">
                         <div class="info-item">
                           <div class="info-text">
-                            <div class="client-image">
-                              <img
-                                src="assets/img/home-1/testimonial/06.html"
-                                alt="img"
-                              />
-                            </div>
                             <h3>Maria Denuva</h3>
                             <span>Farmer man</span>
                           </div>
                           <div class="icon">
-                            <img
-                              src="assets/img/home-3/icon/09.svg"
-                              alt="img"
-                            />
+                            <svg width="54" height="44" viewBox="0 0 72 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M29.5385 0H3.69231C1.65637 0 0 1.65637 0 3.69231V27.6923C0 29.7282 1.65637 31.3846 3.69231 31.3846H18.9905C17.2602 39.8756 9.67514 46.1538 0.923077 46.1538C0.413354 46.1538 0 46.567 0 47.0769V59.0769C0 59.5868 0.413354 60 0.923077 60C18.7375 60 33.2308 45.5068 33.2308 27.6923V3.69231C33.2308 1.65637 31.5744 0 29.5385 0ZM31.3846 27.6923C31.3846 44.1803 18.2177 57.6506 1.84615 58.1402V47.9791C6.42831 47.7707 10.8089 46.0161 14.2695 42.9849C17.9234 39.7846 20.3138 35.3836 21.0007 30.5926C21.0388 30.3275 20.9599 30.0591 20.7846 29.8569C20.6092 29.6546 20.3546 29.5385 20.0871 29.5385H3.69231C2.67434 29.5385 1.84615 28.7103 1.84615 27.6923V3.69231C1.84615 2.67434 2.67434 1.84615 3.69231 1.84615H29.5385C30.5564 1.84615 31.3846 2.67434 31.3846 3.69231V27.6923ZM68.3077 0H42.4615C40.4256 0 38.7692 1.65637 38.7692 3.69231V27.6923C38.7692 29.7282 40.4256 31.3846 42.4615 31.3846H57.7604C56.0302 39.8756 48.4449 46.1538 39.6923 46.1538C39.1824 46.1538 38.7692 46.567 38.7692 47.0769V59.0769C38.7692 59.5868 39.1824 60 39.6923 60C57.5068 60 72 45.5068 72 27.6923V3.69231C72 1.65637 70.3438 0 68.3077 0ZM70.1538 27.6923C70.1538 44.1803 56.9869 57.6506 40.6154 58.1402V47.9791C45.1975 47.7709 49.5783 46.0161 53.0391 42.9849C56.6932 39.7846 59.0838 35.3836 59.7707 30.5926C59.8087 30.3275 59.7297 30.0591 59.5545 29.8569C59.3791 29.6546 59.1247 29.5385 58.857 29.5385H42.4615C41.4436 29.5385 40.6154 28.7103 40.6154 27.6923V3.69231C40.6154 2.67434 41.4436 1.84615 42.4615 1.84615H68.3077C69.3257 1.84615 70.1538 2.67434 70.1538 3.69231V27.6923Z" fill="#11A21B"/>
+                            </svg>
                           </div>
                         </div>
                         <p>
@@ -798,21 +750,27 @@
                           quick prototyping! The designs are professional and
                           work seamlessly with my workflow.
                         </p>
-                        <div class="star">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                        <div class="testi-card-footer">
+                          <div class="star" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="arrow-button">
+                            <button class="array-prev" aria-label="Previous testimonial" type="button">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14.0394 5.6988C14.9961 4.45194 15.6486 3.03052 15.9039 1.36056C15.9611 0.986167 16.4174 0.837007 16.6743 1.11525L17.4313 1.93497C17.5351 2.0473 17.5741 2.20656 17.5348 2.35435C17.182 3.68318 16.8568 4.70509 15.2568 6.72611C15.7815 9.37638 16.4718 18.4367 0.84107 16.8416C0.502085 16.807 0.333529 16.4116 0.539694 16.1403C1.45394 14.9373 3.45968 12.0885 4.75195 8.69804C6.1914 4.92514 11.7141 5.25414 14.0394 5.6988Z" fill="#11A21B"/>
+                              </svg>
+                            </button>
+                            <button class="array-next" aria-label="Next testimonial" type="button">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3.96059 12.3012C3.00388 13.5481 2.35136 14.9695 2.09613 16.6394C2.03891 17.0138 1.58265 17.163 1.32569 16.8848L0.568673 16.065C0.464927 15.9527 0.425937 15.7934 0.465177 15.6457C0.817988 14.3168 1.14321 13.2949 2.74317 11.2739C2.21853 8.62363 1.52819 -0.43669 17.1589 1.15841C17.4979 1.19301 17.6665 1.58836 17.4603 1.85966C16.5461 3.06275 14.5403 5.91146 13.248 9.30196C11.8086 13.0749 6.28588 12.7459 3.96059 12.3012Z" fill="#11A21B"/>
+                              </svg>
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                      <div class="arrow-button">
-                        <button class="array-prev">
-                          <img src="assets/img/home-3/icon/02.svg" alt="img" />
-                        </button>
-                        <button class="array-next">
-                          <img src="assets/img/home-3/icon/04.svg" alt="img" />
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -821,20 +779,13 @@
                       <div class="content">
                         <div class="info-item">
                           <div class="info-text">
-                            <div class="client-image">
-                              <img
-                                src="assets/img/home-3/client-2.png"
-                                alt="img"
-                              />
-                            </div>
                             <h3>Maria Denuva</h3>
                             <span>Farmer man</span>
                           </div>
                           <div class="icon">
-                            <img
-                              src="assets/img/home-3/icon/09.svg"
-                              alt="img"
-                            />
+                            <svg width="54" height="44" viewBox="0 0 72 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M29.5385 0H3.69231C1.65637 0 0 1.65637 0 3.69231V27.6923C0 29.7282 1.65637 31.3846 3.69231 31.3846H18.9905C17.2602 39.8756 9.67514 46.1538 0.923077 46.1538C0.413354 46.1538 0 46.567 0 47.0769V59.0769C0 59.5868 0.413354 60 0.923077 60C18.7375 60 33.2308 45.5068 33.2308 27.6923V3.69231C33.2308 1.65637 31.5744 0 29.5385 0ZM31.3846 27.6923C31.3846 44.1803 18.2177 57.6506 1.84615 58.1402V47.9791C6.42831 47.7707 10.8089 46.0161 14.2695 42.9849C17.9234 39.7846 20.3138 35.3836 21.0007 30.5926C21.0388 30.3275 20.9599 30.0591 20.7846 29.8569C20.6092 29.6546 20.3546 29.5385 20.0871 29.5385H3.69231C2.67434 29.5385 1.84615 28.7103 1.84615 27.6923V3.69231C1.84615 2.67434 2.67434 1.84615 3.69231 1.84615H29.5385C30.5564 1.84615 31.3846 2.67434 31.3846 3.69231V27.6923ZM68.3077 0H42.4615C40.4256 0 38.7692 1.65637 38.7692 3.69231V27.6923C38.7692 29.7282 40.4256 31.3846 42.4615 31.3846H57.7604C56.0302 39.8756 48.4449 46.1538 39.6923 46.1538C39.1824 46.1538 38.7692 46.567 38.7692 47.0769V59.0769C38.7692 59.5868 39.1824 60 39.6923 60C57.5068 60 72 45.5068 72 27.6923V3.69231C72 1.65637 70.3438 0 68.3077 0ZM70.1538 27.6923C70.1538 44.1803 56.9869 57.6506 40.6154 58.1402V47.9791C45.1975 47.7709 49.5783 46.0161 53.0391 42.9849C56.6932 39.7846 59.0838 35.3836 59.7707 30.5926C59.8087 30.3275 59.7297 30.0591 59.5545 29.8569C59.3791 29.6546 59.1247 29.5385 58.857 29.5385H42.4615C41.4436 29.5385 40.6154 28.7103 40.6154 27.6923V3.69231C40.6154 2.67434 41.4436 1.84615 42.4615 1.84615H68.3077C69.3257 1.84615 70.1538 2.67434 70.1538 3.69231V27.6923Z" fill="#11A21B"/>
+                            </svg>
                           </div>
                         </div>
                         <p>
@@ -843,21 +794,27 @@
                           quick prototyping! The designs are professional and
                           work seamlessly with my workflow.
                         </p>
-                        <div class="star">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
+                        <div class="testi-card-footer">
+                          <div class="star" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="arrow-button">
+                            <button class="array-prev" aria-label="Previous testimonial" type="button">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M14.0394 5.6988C14.9961 4.45194 15.6486 3.03052 15.9039 1.36056C15.9611 0.986167 16.4174 0.837007 16.6743 1.11525L17.4313 1.93497C17.5351 2.0473 17.5741 2.20656 17.5348 2.35435C17.182 3.68318 16.8568 4.70509 15.2568 6.72611C15.7815 9.37638 16.4718 18.4367 0.84107 16.8416C0.502085 16.807 0.333529 16.4116 0.539694 16.1403C1.45394 14.9373 3.45968 12.0885 4.75195 8.69804C6.1914 4.92514 11.7141 5.25414 14.0394 5.6988Z" fill="#11A21B"/>
+                              </svg>
+                            </button>
+                            <button class="array-next" aria-label="Next testimonial" type="button">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3.96059 12.3012C3.00388 13.5481 2.35136 14.9695 2.09613 16.6394C2.03891 17.0138 1.58265 17.163 1.32569 16.8848L0.568673 16.065C0.464927 15.9527 0.425937 15.7934 0.465177 15.6457C0.817988 14.3168 1.14321 13.2949 2.74317 11.2739C2.21853 8.62363 1.52819 -0.43669 17.1589 1.15841C17.4979 1.19301 17.6665 1.58836 17.4603 1.85966C16.5461 3.06275 14.5403 5.91146 13.248 9.30196C11.8086 13.0749 6.28588 12.7459 3.96059 12.3012Z" fill="#11A21B"/>
+                              </svg>
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                      <div class="arrow-button">
-                        <button class="array-prev">
-                          <img src="assets/img/home-3/icon/02.svg" alt="img" />
-                        </button>
-                        <button class="array-next">
-                          <img src="assets/img/home-3/icon/04.svg" alt="img" />
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -867,85 +824,110 @@
           </div>
         </section>
 
-        <!-- Brand Section Start -->
-        <div class="brand-section-3 section-padding fix">
-          <div class="container">
-            <div class="swiper brand-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b1.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/01.png" alt="img" />
-                    </span>
-                  </div>
+   <!-- Brand Section Start -->
+      <div class="brand-section-3 section-padding fix">
+        <div class="container">
+          <div class="section-title text-center mb-5">
+            <span class="sub-title-3">Brands</span>
+            <h2 class="text-anim">Our Brands</h2>
+          </div>
+          <div class="swiper brand-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-tea-sprig.png" alt="Ceylon tea leaves" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-tea-sprig.png" alt="Ceylon tea leaves" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b2.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/02.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-cinnamon.png" alt="Cinnamon" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-cinnamon.png" alt="Cinnamon" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b3.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/03.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-rubber.png" alt="Rubber sheets" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-rubber.png" alt="Rubber sheets" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b4.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/04.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-spices.png" alt="Spices" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-spices.png" alt="Spices" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b5.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/05.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-tea.png" alt="Black tea" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/product-tea.png" alt="Black tea" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b6.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/06.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-tea-scoop.png" alt="Tea scoop" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/shape-tea-scoop.png" alt="Tea scoop" />
+                  </span>
                 </div>
-                <div class="swiper-slide">
-                  <div class="brand-box-1">
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/b7.png" alt="img" />
-                    </span>
-                    <span class="brand-img-1">
-                      <img src="assets/img/home-3/brand/07.png" alt="img" />
-                    </span>
-                  </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brand-box-1">
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/decor-tea-cup.png" alt="Ceylon tea cup" />
+                  </span>
+                  <span class="brand-img-1">
+                    <img src="assets/img/asia-siyaka/decor-tea-cup.png" alt="Ceylon tea cup" />
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+        
+      <!-- Letter-Image-Section Start -->
+      <div class="letter-image-section text-center">
+        <div class="letter-image text-center" style="
+              background-image: url(assets/img/asia-siyaka/about-tea-plantation.jpg);
+              background-position: center;
+              background-size: cover;
+              text-align: center;
+            ">
+          SIYAKA
+        </div>
+        <div class="drone-shape position-relative">
+          <div class="tea-steam-container">
+            <span class="tea-steam-wisp wisp-1"></span>
+            <span class="tea-steam-wisp wisp-2"></span>
+            <span class="tea-steam-wisp wisp-3"></span>
+            <span class="tea-steam-wisp wisp-4"></span>
+          </div>
+          <img src="assets/img/asia-siyaka/Asia -Svaka-Tea-Set.png" alt="Ceylon Hot Tea Cup" />
+        </div>
+      </div>
       
         <!-- Footer Section Start -->
         <footer
@@ -1254,6 +1236,25 @@
     <script src="assets/js/wow.min.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+
+    <!-- Google Translate Hidden Element & Loader -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        if (window.google && window.google.translate) {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,si,ta,zh-CN,ja,ar,ru,de',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          }, 'google_translate_element');
+        }
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!--<< Theme Enhancements JS (Language Switcher, Interactive Components) >>-->
+    <script src="assets/js/theme-enhancements.js"></script>
   </body>
 
 </html>

@@ -1670,3 +1670,284 @@ body {
     flex: 0 0 230px;
   }
 }
+
+/* ==========================================================================
+   OUR STATISTICS SECTION (About Page) Image Alignment
+   Matches left image height to right content from start line to bottom cards
+   ========================================================================== */
+.our-statistics-wrapper .row {
+  align-items: stretch !important;
+}
+
+.our-statistics-wrapper .our-statistics-image {
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.our-statistics-wrapper .our-statistics-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .our-statistics-wrapper .our-statistics-image {
+    min-height: 380px !important;
+  }
+}
+
+.our-statistics-wrapper .our-statistics-content .statistics-card p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   LETTER IMAGE SECTION ("SIYAKA" Text & Ceylon Tea Cup)
+   Same styles from home.css applied across all pages
+   ========================================================================== */
+.letter-image-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.letter-image-section .letter-image {
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letter-image-section .drone-shape {
+  text-align: center;
+  margin-top: -200px;
+}
+
+/* Move ONLY the cup image down */
+.letter-image-section .drone-shape > img {
+  position: relative;
+  top: 340px;
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.letter-image-section .drone-shape .tea-steam-container {
+  top: 295px;
+}
+
+@media (max-width: 1399px) {
+  .letter-image-section {
+    margin-top: 19px !important;
+    margin-bottom: 18px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .letter-image-section {
+    margin-top: 14px !important;
+    margin-bottom: 13px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .letter-image-section {
+    margin-top: 18px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .letter-image-section {
+    margin-top: 30px !important;
+    margin-bottom: 27px !important;
+  }
+}
+
+/* ==========================================================================
+   TESTIMONIAL SECTION 3 (About Page)
+   Typography: Times New Roman throughout
+   ========================================================================== */
+.testimonial-section-3,
+.testimonial-section-3 h1,
+.testimonial-section-3 h2,
+.testimonial-section-3 h3,
+.testimonial-section-3 h4,
+.testimonial-section-3 h5,
+.testimonial-section-3 h6,
+.testimonial-section-3 p,
+.testimonial-section-3 span,
+.testimonial-section-3 div,
+.testimonial-section-3 a,
+.testimonial-section-3 button,
+.testimonial-section-3 .sub-title-3,
+.testimonial-section-3 .text-anim,
+.testimonial-section-3 .testimonial-box,
+.testimonial-section-3 .info-text {
+  font-family: "Times New Roman", Times, Georgia, serif !important;
+}
+
+.testimonial-section-3 i,
+.testimonial-section-3 .fa-solid,
+.testimonial-section-3 .fas,
+.testimonial-section-3 .far,
+.testimonial-section-3 [class*="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+}
+
+.testimonial-section-3 {
+  background-color: #f0f7f2 !important; /* pale mint-green background */
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-wrapper-3 {
+  margin-top: 40px;
+}
+
+.testimonial-wrapper-3 .testimonial-box {
+  background-color: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 34px 34px 28px !important;
+  box-shadow: 0 10px 30px rgba(0, 80, 19, 0.06) !important;
+  border: 1px solid rgba(0, 80, 19, 0.08) !important;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-wrapper-3 .testimonial-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 80, 19, 0.1) !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  margin-bottom: 0 !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item .info-text {
+  text-align: left;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item .info-text h3 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #0d2b14 !important;
+  margin-bottom: 4px !important;
+  line-height: 1.2 !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item .info-text span {
+  font-size: 15px !important;
+  color: #5a735e !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+  display: block !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item .icon {
+  flex-shrink: 0;
+  margin-left: 16px;
+  line-height: 1;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content .info-item .icon svg {
+  display: block;
+  max-width: 54px;
+  height: auto;
+}
+
+.testimonial-wrapper-3 .testimonial-box .content p {
+  border-top: 1px solid #e0e8e1 !important; /* light gray divider below client details */
+  border-bottom: 1px solid #e0e8e1 !important; /* light gray divider between text and footer */
+  margin: 22px 0 24px 0 !important;
+  padding: 22px 0 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  color: #2b392d !important;
+  line-height: 1.85 !important;
+  text-align: left;
+}
+
+.testimonial-wrapper-3 .testimonial-box .testi-card-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 4px;
+}
+
+.testimonial-wrapper-3 .testimonial-box .testi-card-footer .star {
+  color: #ff8c00 !important; /* five orange stars */
+  display: flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  font-size: 17px !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .testi-card-footer .star i {
+  color: #ff8c00 !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .arrow-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  position: static !important;
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-prev,
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-next {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background-color: #dcf2de !important; /* pale mint-green circle */
+  border: 1px solid rgba(17, 162, 27, 0.25) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 !important;
+  outline: none;
+}
+
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-prev:hover,
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-next:hover {
+  background-color: #005013 !important;
+  border-color: #005013 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 80, 19, 0.25);
+}
+
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-prev:hover svg path,
+.testimonial-wrapper-3 .testimonial-box .arrow-button .array-next:hover svg path {
+  fill: #ffffff !important;
+}
+
+@media (max-width: 991px) {
+  .testimonial-wrapper-3 .testimonial-box {
+    padding: 24px 20px !important;
+  }
+  .testimonial-wrapper-3 .testimonial-box .content p {
+    font-size: 16px !important;
+  }
+}

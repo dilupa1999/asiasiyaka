@@ -579,12 +579,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Move ONLY the cup image down */
 .letter-image-section .drone-shape > img {
     position: relative;
-    top: 420px;
+    top: 340px;
     width: 600px;      /* size eka methana wenas karanna */
     height: auto;   
     margin: 0 auto;
     display: block;
-             
+}
+
+.letter-image-section .drone-shape .tea-steam-container {
+    top: 295px;
 }
 
 @media (max-width: 1399px) {
