@@ -1062,6 +1062,29 @@
         </div>
       </section>
       <!-- Annual Reports & Financial Publications Section End -->
+      <!-- Latest News Section Start -->
+      <section class="home-news-section" aria-labelledby="latest-news-title">
+        <div class="container">
+          <div class="home-news-heading">
+            <div class="section-title mb-0">
+              <span class="sub-title-3">News &amp; Insights</span>
+              <h2 class="text-anim" id="latest-news-title">From Our Newsroom</h2>
+              <p class="mt-2 mb-0">Follow the people, markets and milestones shaping Sri Lanka's commodity trade.</p>
+            </div>
+            <a href="news.html" class="home-news-all-link">View all news <i class="ph ph-arrow-up-right"></i></a>
+          </div>
+          <div class="swiper home-news-slider" aria-label="Latest news">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide"><div class="home-news-card"><img src="assets/img/about/about-tea-landscape-2.jpg" alt="Tea estate landscape in Sri Lanka" /><div class="home-news-card-content"><span class="home-news-category">Charities Services</span><p class="home-news-date">July 27, 2023</p><h3>Colombo Tea Traders Association e Auction | Sri Lanka</h3><p>Discover the digital auction milestone that reshaped the 137-year-old Sri Lankan tea industry.</p><a href="news.html">Read more <i class="ph ph-arrow-right"></i></a></div></div></article>
+              <article class="swiper-slide"><div class="home-news-card"><img src="assets/img/about/about-tea-landscape.jpg" alt="Tea country in Sri Lanka" /><div class="home-news-card-content"><span class="home-news-category">Asia Siyaka</span><p class="home-news-date">March 23, 2023</p><h3>Russia's economic crisis threatens Sri Lanka's low grown tea</h3><p>How changing market conditions affected one of Sri Lanka's most important tea export segments.</p><a href="news.html">Read more <i class="ph ph-arrow-right"></i></a></div></div></article>
+              <article class="swiper-slide"><div class="home-news-card"><img src="assets/img/about/about-tea-picker.jpg" alt="Tea picker at work" /><div class="home-news-card-content"><span class="home-news-category">Asia Siyaka</span><p class="home-news-date">March 23, 2023</p><h3>SOFA Summit: celebrating International Tea Day</h3><p>Asia Siyaka joined the tea community to commemorate International Tea Day at the SOFA Summit.</p><a href="news.html">Read more <i class="ph ph-arrow-right"></i></a></div></div></article>
+              <article class="swiper-slide"><div class="home-news-card"><img src="assets/img/about/about-tea-tasting.jpg" alt="Tea tasting session" /><div class="home-news-card-content"><span class="home-news-category">Asia Siyaka</span><p class="home-news-date">March 21, 2023</p><h3>Sri Lanka: Tea Auction Transformed | F&amp;D Magazine</h3><p>Explore the enduring relationship between Ceylon tea, Sri Lanka's economy and its people.</p><a href="news.html">Read more <i class="ph ph-arrow-right"></i></a></div></div></article>
+            </div>
+            <div class="home-news-footer"><div class="home-news-pagination" aria-label="News carousel pagination"></div><div class="home-news-controls"><button type="button" class="home-news-prev" aria-label="Previous news story"><i class="ph ph-arrow-left"></i></button><button type="button" class="home-news-next" aria-label="Next news story"><i class="ph ph-arrow-right"></i></button></div></div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest News Section End -->
 
       <!-- Team Section Start -->
       <section class="section-padding fix pb-0">
@@ -1661,6 +1684,15 @@
         576: { slidesPerView: 2, slidesPerGroup: 2 },
         992: { slidesPerView: 3, slidesPerGroup: 3 },
       },
+    });
+    new Swiper(".home-news-slider", {
+      loop: true,
+      speed: 800,
+      spaceBetween: 24,
+      autoplay: { delay: 4200, disableOnInteraction: false, pauseOnMouseEnter: true },
+      navigation: { nextEl: ".home-news-next", prevEl: ".home-news-prev" },
+      pagination: { el: ".home-news-pagination", clickable: true },
+      breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } },
     });
   </script>
   <script>
