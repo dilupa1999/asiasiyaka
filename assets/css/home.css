@@ -636,7 +636,11 @@ h1, h2, h3, h4, h5, h6 {
 .contact-location-map .leaflet-control-attribution { font-size: 9px; }
 .map-open-link { display: inline-block; margin-top: 7px; color: #176534; font-size: 11px; text-decoration: none; }
 .map-open-link:hover { text-decoration: underline; }
-.contact-location-divider { margin: 24px 0; border-color: #dfe6e1; opacity: 1; }
+.contact-location-divider { display: block; height: 1px; margin: 55px 0; border: 0; background: #dfe6e1; opacity: 1; }
 .contact-location-map .leaflet-pane, .contact-location-map .leaflet-top, .contact-location-map .leaflet-bottom { z-index: 1; }
 @media (max-width: 1199.98px) { .contact-location-row { grid-template-columns: minmax(0, 1fr) minmax(150px, 0.9fr); gap: 14px; } .contact-location-map { height: 170px; border-radius: 20px; } .contact-section .custom-contact-info { padding: 24px !important; } }
 @media (max-width: 767.98px) { .contact-location-row { grid-template-columns: 1fr; gap: 16px; } .contact-location-map { height: 220px; border-radius: 18px; } .contact-location-divider { margin: 22px 0; } .contact-section .custom-contact-info { padding: 22px !important; } }
+
+/* Extra separation between the contact form heading and its fields. */
+.contact-form-title { margin-bottom: 3.5rem !important; }
+
