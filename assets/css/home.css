@@ -619,8 +619,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Contact page: location details on the left, map on the right */
 .contact-section .custom-contact-info { padding: 28px 30px !important; border-color: #e0e7e2 !important; border-radius: 16px !important; background: #f8faf9 !important; }
-.contact-section .custom-contact-info > h3 { font-size: 21px; font-weight: 600; margin-bottom: 26px !important; }
-.contact-location-row { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(180px, 1fr); gap: 20px; align-items: center; }
+.contact-section .custom-contact-info > h3 { font-size: 21px; font-weight: 600; margin-bottom: 15px !important; }
+.contact-location-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(180px, 1.2fr); gap: 20px; align-items: center; }
 .contact-location-details, .contact-location-details .content { min-width: 0; }
 .contact-location-details .contact-item { align-items: flex-start; }
 .contact-location-details .content h5 { color: #0d4a1c; font-size: 15px; line-height: 1.4; }
@@ -632,7 +632,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-detail-list a:hover { color: #0d4a1c; }
 .contact-separator { margin: 0 4px; color: #9ba49e; }
 .contact-map-wrap { min-width: 0; position: relative; }
-.contact-location-map { width: 100%; height: 188px; border-radius: 26px; background: #d8dfdb; overflow: hidden; z-index: 1; }
+.contact-location-map { width: 100%; height: 210px; border-radius: 26px; background: #d8dfdb; overflow: hidden; z-index: 1; }
 .contact-location-map .leaflet-control-attribution { font-size: 9px; }
 .map-open-link { display: inline-block; margin-top: 7px; color: #176534; font-size: 11px; text-decoration: none; }
 .map-open-link:hover { text-decoration: underline; }
