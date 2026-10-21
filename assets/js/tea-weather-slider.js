@@ -93,7 +93,7 @@
         <h3>${region.name}</h3>
 
         <div class="tea-weather-main">
-          <span class="tea-weather-icon" data-weather-icon="${region.id}" aria-hidden="true">⏳</span>
+          <span class="tea-weather-icon notranslate" data-weather-icon="${region.id}" aria-hidden="true">⏳</span>
           <div class="tea-weather-temperature-block">
             <strong data-weather-temp="${region.id}">--°C</strong>
             <span data-weather-condition="${region.id}">Loading weather…</span>
@@ -102,14 +102,14 @@
 
         <div class="tea-weather-metrics">
           <div class="tea-weather-metric">
-            <span class="tea-weather-metric-icon" aria-hidden="true">💧</span>
+            <span class="tea-weather-metric-icon notranslate" aria-hidden="true">💧</span>
             <div>
               <strong data-weather-humidity="${region.id}">--%</strong>
               <span>Humidity</span>
             </div>
           </div>
           <div class="tea-weather-metric">
-            <span class="tea-weather-metric-icon" aria-hidden="true">≋</span>
+            <span class="tea-weather-metric-icon notranslate" aria-hidden="true">≋</span>
             <div>
               <strong data-weather-wind="${region.id}">-- km/h</strong>
               <span>Wind</span>
