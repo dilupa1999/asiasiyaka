@@ -1213,6 +1213,10 @@ body {
   transition: all 0.25s ease;
 }
 
+.ar-cse-btn {
+  margin-left: auto;
+}
+
 .ar-action-btn-secondary:hover {
   background: #f0f7f1;
   color: #005013;
@@ -2120,38 +2124,21 @@ body {
   }
 
   .ar-actions-bar {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 9px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .ar-actions-bar .ar-action-btn-primary,
   .ar-actions-bar .ar-action-btn-secondary {
     width: 100%;
     min-width: 0;
+    min-height: 52px;
     justify-content: center;
+    margin-left: 0;
+    padding: 8px 6px;
     text-align: center;
-    line-height: 1.3;
-    box-sizing: border-box;
-  }
-
-  .ar-actions-bar .ar-action-btn-secondary[style] {
-    margin-left: 0 !important;
-  }
-
-  .ar-table-wrap {
-    overflow-x: auto;
-  }
-
-  .ar-table {
-    min-width: 460px;
-  }
-
-  .ar-table-head {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 5px;
-    padding: 11px 14px;
+    line-height: 1.25;
   }
 
   .ar-pdf-toolbar {
@@ -2191,12 +2178,6 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  .ar-action-btn-primary,
-  .ar-action-btn-secondary {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
-
   .ar-modal-btn {
     font-size: 11px;
   }
@@ -2218,6 +2199,13 @@ body {
 
   .ar-hl-title {
     font-size: 20px;
+  }
+
+  .ar-cse-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    text-align: center;
   }
 }
 

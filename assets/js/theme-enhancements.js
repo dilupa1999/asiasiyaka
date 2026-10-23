@@ -479,7 +479,7 @@
           <a href="${driveDownloadUrl}" target="_blank" rel="noopener" class="ar-action-btn-secondary">
             <i class="ph ph-download-simple"></i> Download PDF
           </a>
-          <a href="https://www.cse.lk" target="_blank" rel="noopener" class="ar-action-btn-secondary" style="margin-left: auto;">
+          <a href="https://www.cse.lk" target="_blank" rel="noopener" class="ar-action-btn-secondary ar-cse-btn">
             <i class="ph ph-bank"></i> Colombo Stock Exchange
           </a>
         </div>
