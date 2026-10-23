@@ -1989,6 +1989,238 @@ body {
 .ar-pdf-status { min-height: 20px; margin: 0; padding: 3px 14px 8px; text-align: center; color: #536456; font-size: 12px; background: #eef2ed; }
 @media (max-width: 899.98px) { .ar-pdf-toolbar { flex-wrap: wrap; justify-content: center; } .ar-pdf-toolbar .ar-fallback-btn { margin-left: 0; } .ar-pdf-page { max-width: 100%; } .ar-pdf-stage { padding: 12px; } }
 
+@media (max-width: 767.98px) {
+  .annual-reports-section {
+    padding: 32px 0 !important;
+  }
+
+  .ar-header-wrapper {
+    align-items: stretch;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .ar-header-wrapper .section-title h2 {
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.15;
+  }
+
+  .ar-filter-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .ar-filter-btn {
+    min-height: 38px;
+    padding: 8px 10px;
+    width: 100%;
+  }
+
+  .ar-card {
+    padding: 9px;
+  }
+
+  .ar-card-thumb-wrap {
+    height: min(58vw, 220px);
+  }
+
+  .ar-card-title {
+    font-size: 16px;
+  }
+
+  .ar-card-actions {
+    align-items: stretch;
+  }
+
+  .ar-read-btn {
+    min-height: 38px;
+  }
+
+  .ar-modal-backdrop {
+    padding: 8px !important;
+  }
+
+  .ar-modal-container {
+    height: calc(100dvh - 16px);
+    max-height: none;
+    border-radius: 12px;
+  }
+
+  .ar-modal-header {
+    padding: 12px;
+    align-items: stretch;
+  }
+
+  .ar-modal-header-left {
+    min-width: 0;
+    width: 100%;
+    gap: 9px;
+  }
+
+  .ar-modal-logo {
+    height: 35px;
+    padding: 3px 5px;
+  }
+
+  .ar-modal-subtitle {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .ar-modal-title {
+    font-size: 14px;
+  }
+
+  .ar-modal-header-right {
+    width: 100%;
+    align-items: stretch;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .ar-tab-switch {
+    order: 1;
+    flex: 1 1 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .ar-tab-btn {
+    justify-content: center;
+    min-width: 0;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .ar-tab-btn span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ar-modal-btn {
+    order: 2;
+    flex: 1 1 auto;
+    justify-content: center;
+    min-height: 36px;
+    padding: 7px 9px;
+    text-align: center;
+  }
+
+  .ar-modal-close {
+    order: 3;
+    flex: 0 0 36px;
+  }
+
+  .ar-highlights-content {
+    padding: 16px 12px;
+  }
+
+  .ar-actions-bar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .ar-actions-bar .ar-action-btn-primary,
+  .ar-actions-bar .ar-action-btn-secondary {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.3;
+    box-sizing: border-box;
+  }
+
+  .ar-actions-bar .ar-action-btn-secondary[style] {
+    margin-left: 0 !important;
+  }
+
+  .ar-table-wrap {
+    overflow-x: auto;
+  }
+
+  .ar-table {
+    min-width: 460px;
+  }
+
+  .ar-table-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 11px 14px;
+  }
+
+  .ar-pdf-toolbar {
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .ar-pdf-nav-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 8px 7px;
+  }
+
+  .ar-pdf-page-indicator {
+    min-width: 0;
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  .ar-pdf-stage {
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+  }
+
+  .ar-pdf-page {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  .ar-pdf-page canvas {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ar-action-btn-primary,
+  .ar-action-btn-secondary {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .ar-modal-btn {
+    font-size: 11px;
+  }
+
+  .ar-modal-btn span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ar-hl-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .ar-hl-banner {
+    padding: 18px;
+  }
+
+  .ar-hl-title {
+    font-size: 20px;
+  }
+}
+
 /* ==========================================================================
    HOME NEWS CAROUSEL
    ========================================================================== */

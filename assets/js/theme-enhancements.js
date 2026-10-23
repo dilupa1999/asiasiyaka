@@ -323,7 +323,7 @@
   function updatePdfControls() {
     const previous = document.getElementById('ar-pdf-prev'); const next = document.getElementById('ar-pdf-next'); const indicator = document.getElementById('ar-pdf-page-indicator'); const count = pdfReader.document ? pdfReader.document.numPages : 0; const lastVisiblePage = Math.min(pdfReader.page + (isPdfSpread() ? 1 : 0), count);
     if (previous) previous.disabled = !count || pdfReader.page <= 1; if (next) next.disabled = !count || lastVisiblePage >= count;
-    if (indicator) indicator.textContent = count ? `Pages ${pdfReader.page}${lastVisiblePage > pdfReader.page ? `â€“${lastVisiblePage}` : ''} of ${count}` : 'Loading documentâ€¦';
+    if (indicator) indicator.textContent = count ? `Pages ${pdfReader.page}${lastVisiblePage > pdfReader.page ? `-${lastVisiblePage}` : ''} of ${count}` : 'Loading documentâ€¦';
   }
   async function renderPdfPage(canvas, pageNumber, targetWidth) {
     const page = await pdfReader.document.getPage(pageNumber); const naturalViewport = page.getViewport({ scale: 1 }); const stage = document.getElementById('ar-pdf-stage'); const maximumHeight = Math.max((stage ? stage.clientHeight : 560) - 32, 260); const scale = Math.min(targetWidth / naturalViewport.width, maximumHeight / naturalViewport.height); const viewport = page.getViewport({ scale: Math.max(scale, 0.35) }); const density = window.devicePixelRatio || 1;
